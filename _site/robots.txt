@@ -1,0 +1,22 @@
+# filter pages and documents for the noindex key
+# robotstxt.org - if `_config` production variable is false, robots will be disallowed.
+
+
+User-agent: *
+
+
+
+Disallow: /404.html
+
+Disallow: /feed.xml
+
+Disallow: /search/
+
+Disallow: /assets/css/main.css
+
+Disallow: /search.json
+
+
+
+
+Sitemap: http://djkeh.github.io/sitemap.xml

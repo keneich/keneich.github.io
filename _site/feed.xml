@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Keneich's Blog</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2019-03-04T15:57:06+09:00</updated>
+<id>http://localhost:4000/</id>
+<author>
+  <name>keneich</name>
+  <uri>http://localhost:4000/</uri>
+  <email>keneich2@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[수영일기-201903월]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/swimming/" />
+  <id>http://localhost:4000/blog/swimming</id>
+  <updated>2019-03-03 00:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-03-01T09:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;건강한-삶을-위해&quot;&gt;건강한 삶을 위해&lt;/h1&gt;
+
+&lt;h3 id=&quot;2019년-03월-02일-자유수영&quot;&gt;2019년 03월 02일 자유수영&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
+  &lt;li&gt;시간 : 20:10~21:40&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 3,000
+    &lt;ul&gt;
+      &lt;li&gt;평균 스트로크 : 9.8&lt;/li&gt;
+      &lt;li&gt;평균 페이스 : 1분43초/100m&lt;/li&gt;
+      &lt;li&gt;이동시간/총운동시간: 51:30 / 1:37:06&lt;/li&gt;
+      &lt;li&gt;칼로리 : 621&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim01.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;
+&lt;img src=&quot;/images/2019-03-01-swimming/swim02.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3월 첫 수영이다. 3km를 달렸다. 무리를 해서 그런지 왼쪽 어깨에 통증이 살짝 있다.&lt;br /&gt;
+스트로크 수가 아직도 많다. 발차기 열심히 해주고 자세에 신경쓰자.&lt;/p&gt;
+
+&lt;!--
+### 2019년 03월 xx일 강습
+1. 장소 : 군포 근로자 복지관
+2. 시간 : 21:00~21:50
+3. 운동량(단위 m) : 1,200
+  - 평균 스트로크 : 9.5
+  - 평균 페이스 : 1분46초/100m
+  - 이동시간/총운동시간: 20:44 / 1:08:55
+  - 칼로리 : 247
+
+![gamin1](/images/2019-02-27-swimming0227/0227_1.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+![gamin2](/images/2019-02-27-swimming0227/0227_2.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+
+평균 스트로크 수치를 중점 적으로 보고있다.  
+현재 9.5~9.8 정도 나온다. 8점 대로 낮추는걸 목표로 열심히 물질 해보자.
+
+## Reference
+* [https://pivotal.io/cicd](https://pivotal.io/cicd)
+--&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/swimming/&quot;&gt;수영일기-201903월&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 01, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[독서일기-2번째 도전]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/reading/" />
+  <id>http://localhost:4000/blog/reading</id>
+  <updated>2019-03-01 00:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-03-01T09:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;읽는-즐거움을-위해100일-33권-3월1일6월8일&quot;&gt;읽는 즐거움을 위해(100일 33권, 3월1일~6월8일)&lt;/h1&gt;
+
+&lt;h3 id=&quot;2똑똑한-부동산-투자&quot;&gt;2.똑똑한 부동산 투자&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
+  &lt;li&gt;저자 : 정지영(아임해피)&lt;/li&gt;
+  &lt;li&gt;분량 : 245 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03월02일&lt;/li&gt;
+  &lt;li&gt;읽기 완료 :&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=13008323&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;1하는-일마다-인정받는-사람들의-비밀&quot;&gt;1.하는 일마다 인정받는 사람들의 비밀&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 자기개발&lt;/li&gt;
+  &lt;li&gt;저자 : 이은재&lt;/li&gt;
+  &lt;li&gt;분량 : 279 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03월01일&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 03월02일&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14524720&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;대기업에서 근무했던 경험을 바탕으로 직장인들에게 많은 조언을 해주고 싶은 저자의 생각이 담겨있다.&lt;/li&gt;
+      &lt;li&gt;나 자신에 집중하라. 규칙을 지켜라. 공감능력을 가져라. 실행이 답이다.(마지막 정리 부분)&lt;/li&gt;
+      &lt;li&gt;93페이지 “아랫것” : 독자에게 반감을 줄 수 있는 문구를 사용한 부분이 아쉽다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;!--
+![gamin2](/images/2019-02-27-swimming0227/0227_2.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+
+평균 스트로크 수치를 중점 적으로 보고있다.  
+현재 9.5~9.8 정도 나온다. 8점 대로 낮추는걸 목표로 열심히 물질 해보자.
+
+## Reference
+* [https://pivotal.io/cicd](https://pivotal.io/cicd)
+--&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/reading/&quot;&gt;독서일기-2번째 도전&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 01, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[나의 100일 계획-2st]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/100-day-planning2/" />
+  <id>http://localhost:4000/blog/100-day-planning2</id>
+  <updated>2019-02-27 01:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-02-27T10:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;100일-계획2번째을-세우고-목표-달성을-위해-최선을-다하자&quot;&gt;100일 계획(2번째)을 세우고 목표 달성을 위해 최선을 다하자&lt;/h2&gt;
+
+&lt;p&gt;2019년 2월 28일 다음과 같이 계획을 세운다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기간 : 03월01일 ~ 06월08일&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;자격증 취득하자.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;100일동안 33권 책을 읽자.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;가족여행 2회이상 가자.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;경매 1건 이상 낙찰한다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;*&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/100-day-planning2/&quot;&gt;나의 100일 계획-2st&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on February 27, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[수영일기-201902월]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/swimming0227/" />
+  <id>http://localhost:4000/blog/swimming0227</id>
+  <updated>2019-02-27 01:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-02-27T10:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;건강한-삶을-위해&quot;&gt;건강한 삶을 위해&lt;/h1&gt;
+
+&lt;h3 id=&quot;2019년-02월27일-자유수영&quot;&gt;2019년 02월27일 자유수영&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
+  &lt;li&gt;시간 : 21:00~21:50&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 1,200
+    &lt;ul&gt;
+      &lt;li&gt;평균 스트로크 : 9.5&lt;/li&gt;
+      &lt;li&gt;평균 페이스 : 1분46초/100m&lt;/li&gt;
+      &lt;li&gt;이동시간/총운동시간: 20:44 / 1:08:55&lt;/li&gt;
+      &lt;li&gt;칼로리 : 247&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-27-swimming0227/0227_1.jpg&quot; alt=&quot;gamin1&quot; width=&quot;300&quot; height=&quot;400&quot; class=&quot;center&quot; /&gt;
+&lt;img src=&quot;/images/2019-02-27-swimming0227/0227_2.jpg&quot; alt=&quot;gamin2&quot; width=&quot;300&quot; height=&quot;400&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;평균 스트로크 수치를 중점 적으로 보고있다.&lt;br /&gt;
+현재 9.5~9.8 정도 나온다. 8점 대로 낮추는걸 목표로 열심히 물질 해보자.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;2019년-02월28일-자유수영&quot;&gt;2019년 02월28일 자유수영&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
+  &lt;li&gt;시간 : 20:00~20:50&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 1,200
+    &lt;ul&gt;
+      &lt;li&gt;평균 스트로크 : 9.3&lt;/li&gt;
+      &lt;li&gt;평균 페이스 : 1분48초/100m&lt;/li&gt;
+      &lt;li&gt;이동시간/총운동시간: 21:06 / 50:40&lt;/li&gt;
+      &lt;li&gt;칼로리 : 258&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;평균 스트로크가 감소했다. 어제보다 효율적으로 앞으로 밀고 나간것이다.&lt;br /&gt;
+오른팔 물잡기를 보완하고, 자유형 호흡 시 자세가 흐트리지지 않도록 주의하자.&lt;/p&gt;
+
+&lt;h1 id=&quot;2019년-2월-합계&quot;&gt;2019년 2월 합계&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-27-swimming0227/2_total.jpg&quot; alt=&quot;2_total&quot; width=&quot;300&quot; height=&quot;400&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2월은 19회, 24.77km 수영을 했다.&lt;br /&gt;
+1회 수영할때 2,000m 이상 수영한 날이 2회 뿐이다.&lt;br /&gt;
+수영장에서 너무 많이 멈춰 있었던거 같다. 좀 더 분발하자.  &lt;br /&gt;
+3월에도 건강을 위해 자주 수영하자.&lt;/p&gt;
+
+&lt;!--
+인용구
+&gt; 문구
+테두리(코드)
+`문구`
+볼드(굵은
+**문구**
+강조
+==문구==
+기울기
+*문구*
+취소선
+~~문구~~
+밑줄
+++밑줄++
+윗첨자,아래첨자
+동해불과 &lt;sub&gt;백두산이&lt;/sub&gt; 마르고 닳도록 ^하느님이 보우
+각주
+APT[^APT] 공격은 공격 기술이 아닌 흐름으로
+[^APT]: APT는 Advance, Persistance, Threat의 두문어로
+코드블럭
+```javascript
+ aaa
+```
+테이블
+|column|column|column|
+|:-----|:-----:|-----:|
+|left|center|right|
+이미지 삽입
+![title](/images/2019-02-27-100-day-planning/20190227_162449.jpg '메모'){: width=&quot;100%&quot; height=&quot;100%&quot;}{: .center}
+링크
+[이름](주소)
+
+## Reference
+* [https://pivotal.io/cicd](https://pivotal.io/cicd)
+--&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/swimming0227/&quot;&gt;수영일기-201902월&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on February 27, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[나의 100일 계획]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/100-day-planning/" />
+  <id>http://localhost:4000/blog/100-day-planning</id>
+  <updated>2019-02-27 01:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-02-27T10:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;2019년 2월 28일이다. 벌써 3월이라니,, 시간이 너무 빠르게 흘러 가는거 같다.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;100일동안 33권 책 읽기 계획&lt;/code&gt;(~2월27일까지)을 정리하는 의미에서 글을 남긴다.&lt;/p&gt;
+
+&lt;p&gt;2018년 11월에 나는 다음과 같은 계획을 세웠으며, 다이어리에 아래 그림과 같이 메모를 남겼다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;자격증 취득하자.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;커피를 끊자.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;100일동안 33권 책을 읽자.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-27-100-day-planning/20190227_162449.jpg&quot; alt=&quot;다이어리메모&quot; title=&quot;메모&quot; width=&quot;100%&quot; height=&quot;100%&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;자격증-취득하자&quot;&gt;자격증 취득하자.&lt;/h2&gt;
+&lt;h4 id=&quot;결과--성공&quot;&gt;결과 : 성공&lt;/h4&gt;
+&lt;p&gt;아마존웹서비스(AWS)를 공부하던 10월 어느 날, &lt;a href=&quot;https://aws.amazon.com/ko/certification/certified-solutions-architect-associate/&quot;&gt;AWS 공인 솔루션스 아키텍트 – 어소시에이트(AWS-SAA)&lt;/a&gt;를 목표로 하고 11월 19일 시험 접수를 해 두었다.&lt;/p&gt;
+
+&lt;p&gt;열심히 공부 하지는 못했지만 dump의 힘을 빌려 합격이라는 결과를 얻었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-27-100-day-planning/saa.png&quot; alt=&quot;SAA&quot; title=&quot;SAA&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;자격증 취득 과정에서 공부한 내용과 방법을 포스팅할 예정이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;커피를-끊자&quot;&gt;커피를 끊자.&lt;/h2&gt;
+&lt;h4 id=&quot;결과--실패&quot;&gt;결과 : 실패&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-27-100-day-planning/coffee01.jpg&quot; alt=&quot;커피&quot; title=&quot;코피커피&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+사진 출처 : GETTY IMAGES&lt;/p&gt;
+
+&lt;p&gt;지난 11월 16일 커피를 끊기로 마음 먹었다. 결과는 참담했다.&lt;br /&gt;
+작심 3일 만에 다시 커피를 마시고 있는 나의 모습을 볼 수 있었다.&lt;br /&gt;
+무모한 도전이었다. 끊는 건 불가능하다&lt;br /&gt;
+&lt;strong&gt;양을 줄이자&lt;/strong&gt; 로 계획을 변경하고 요즘은 하루 2잔 정도 마시고있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;100일동안-33권-책을-읽자&quot;&gt;100일동안 33권 책을 읽자.&lt;/h2&gt;
+&lt;h4 id=&quot;결과--실패-1&quot;&gt;결과 : 실패&lt;/h4&gt;
+&lt;p&gt;어느날 &lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=7099709&quot;&gt;독서 천재 된 홍대리&lt;/a&gt;를 읽고 100일 33권에 도전해 보기로 했다.&lt;/p&gt;
+
+&lt;p&gt;결과는 실패지만 100일 동안 19권의 책을 읽었다.
+1년에 5권 이하의 책을 읽던 나에게는 엄청난 성과 이다.&lt;/p&gt;
+
+&lt;p&gt;100일 동안&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;가방에 가능하면 읽고 있는 책을 소지하고 다녔다.(노트북 + 책 = 무겁다)&lt;/li&gt;
+  &lt;li&gt;버스&amp;amp;지하철에서 휴대폰 대신 책을 읽었다.(버스에서는 책을 읽으면 어지럽다.)&lt;/li&gt;
+  &lt;li&gt;퇴근 후 버스를 타기 전에 1시간 가량 서점에 머물렀다.(신간 도서를 많이 접할 수 있었다.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;33권 목표 중 19권을 읽었다.(내가 참 대견스럽다.)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;자기개발 &amp;amp; 경제(부동산,주식,재무 등) : 11권&lt;/li&gt;
+  &lt;li&gt;전공서적 : 3권&lt;/li&gt;
+  &lt;li&gt;소설 : 5권&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-27-100-day-planning/screen01.jpg&quot; alt=&quot;다이어리메모&quot; title=&quot;독서 다이어리&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/100-day-planning/&quot;&gt;나의 100일 계획&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on February 27, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[jekyll & Github을 이용한 정적 사이트 구축]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/jekyll-install-onUbuntu/" />
+  <id>http://localhost:4000/articles/jekyll-install-onUbuntu</id>
+  <updated>2019-03-04 01:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-02-27T10:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Jekyll은 정적 웹사이트(static website)생성기 입니다.&lt;br /&gt;
+간단한 소개페이지, 기술블로그 등 제한된 용도로 사용하기는 충분합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-설치&quot;&gt;Jekyll 설치&lt;/h2&gt;
+&lt;h4 id=&quot;설치-환경&quot;&gt;설치 환경&lt;/h4&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;mint@mint:~$&lt;/span&gt; uname &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;Linux mint 4.15.0-45-generic #&lt;/span&gt;48-Ubuntu SMP Tue Jan 29 16:28:13 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+&lt;span class=&quot;gp&quot;&gt;mint@mint:~$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/issue
+&lt;span class=&quot;go&quot;&gt;Linux Mint 19.1 Tessa \n \l
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;ruby-및-필요-패키지-설치&quot;&gt;Ruby 및 필요 패키지 설치&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;sudo apt-get install patch zlib1g-dev liblzma-dev&lt;/li&gt;
+  &lt;li&gt;sudo apt-get install ruby ruby-dev build-essential&lt;/li&gt;
+  &lt;li&gt;Ruby 환경 설정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ruby &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
+
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'# Install Ruby Gems to ~/gems'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export GEM_HOME=$HOME/gems'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'export PATH=$HOME/gems/bin:$PATH'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;jekyll-과-bundler-설치하기&quot;&gt;jekyll 과 bundler 설치하기&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;gem install jekyll bundler&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;mint@mint:~$&lt;/span&gt; gem install jekyll bundler
+&lt;span class=&quot;go&quot;&gt;Fetching: public_suffix-3.0.3.gem (100%)
+Successfully installed public_suffix-3.0.3
+Fetching: addressable-2.6.0.gem (100%)
+Successfully installed addressable-2.6.0
+Fetching: colorator-1.1.0.gem (100%)
+
+...(생략)
+
+Successfully installed bundler-2.0.1
+Parsing documentation for bundler-2.0.1
+Installing ri documentation for bundler-2.0.1
+Done installing documentation for bundler after 3 seconds
+26 gems installed
+
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; jekyll &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;jekyll 3.8.5
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;mint@mint:~$&lt;/span&gt; bundle &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Bundler version 2.0.1
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;블로그-생성&quot;&gt;블로그 생성&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;jekyll new testblog&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; jekyll new testblog
+&lt;span class=&quot;go&quot;&gt;Running bundle install in /home/mint/myblog/testblog...
+  Bundler: Fetching gem metadata from https://rubygems.org/...........
+
+ ...(생략)
+
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;  Bundler: Use `bundle info [gemname]` to see where a bundled gem is installed.The dependency tzinfo-data (&amp;gt;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; will be unused by any of the platforms Bundler is installing &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; Bundler is installing &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;ruby but the dependency is only &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;bundle lock &lt;span class=&quot;nt&quot;&gt;--add-platform&lt;/span&gt; x86-mingw32 x86-mswin32 x64-mingw32 java&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;New jekyll site installed in /home/mint/local_backup/gogo/12.study/myblog/testblog.
+
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;testblog/
+&lt;span class=&quot;gp&quot;&gt;mint@mint:~/testblog$&lt;/span&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;span class=&quot;go&quot;&gt;Configuration file: /home/mint/myblog/testblog/_config.yml
+            Source: /home/mint/myblog/testblog
+       Destination: /home/mint/myblog/testblog/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+       Jekyll Feed: Generating feed for posts
+                    done in 0.372 seconds.
+ Auto-regeneration: enabled for '/home/mint/myblog/testblog'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;네트웍을 통해서 웹페이지를 접근하려면 H옵션 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;testblog$&lt;/span&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; 192.168.1.88
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;확인&quot;&gt;확인&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-jekyll-install-onUbuntu/jekyll01.png&quot; alt=&quot;jekyllsite&quot; title=&quot;site&quot; width=&quot;100%&quot; height=&quot;100%&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;github-페이지-생성-및-jekyll-기본-페이지-push&quot;&gt;Github 페이지 생성 및 jekyll 기본 페이지 Push&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;github 에 가입 후 프로젝트를 생성한다.
+    &lt;ul&gt;
+      &lt;li&gt;create a new Repositories : &lt;a href=&quot;https://github.com/new&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;username.github.io 로 생성해야 주소를 사용할 수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-jekyll-install-onUbuntu/github01.png&quot; alt=&quot;github&quot; title=&quot;site&quot; width=&quot;100%&quot; height=&quot;100%&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;생성한 Repository에 jekyll로 생성한 testlog를 올려준다.
+    &lt;ul&gt;
+      &lt;li&gt;git 작업을 위한 환경 설정(메일주소, 이름)과 초기화&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;# 블로그 폴더 생성&lt;/span&gt;
+blog&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir keneich.github.io
+blog&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;keneich.github.io
+
+&lt;span class=&quot;c&quot;&gt;# git 사용을 위한 기본 환경 설정&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;keneich2@gmail.com&quot;&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;keneich&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# git 사용을 위한 초기화&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;# keneich.github.io&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; README.md
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init
+keneich.github.io/.git/ 안의 빈 깃 저장소를 다시 초기화했습니다
+
+&lt;span class=&quot;c&quot;&gt;# jekyll 기본 페이지 copy&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cp &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; ../testblog/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls
+&lt;/span&gt;404.html  Gemfile  Gemfile.lock  README.md  _config.yml  _posts  _site  about.md  index.md
+
+&lt;span class=&quot;c&quot;&gt;# git을 사용한 파일 Push&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;first commit&quot;&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add origin https://github.com/keneich/keneich.github.io.git
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; origin master
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;github-에-생성된-페이지-확인&quot;&gt;Github 에 생성된 페이지 확인&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-jekyll-install-onUbuntu/github03.png&quot; alt=&quot;github&quot; title=&quot;site&quot; width=&quot;100%&quot; height=&quot;100%&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--
+인용구
+&gt; 문구
+테두리(코드)
+`문구`
+볼드(굵은
+**문구**
+강조
+==문구==
+기울기
+*문구*
+취소선
+~~문구~~
+밑줄
+++밑줄++
+윗첨자,아래첨자
+동해불과 &lt;sub&gt;백두산이&lt;/sub&gt; 마르고 닳도록 ^하느님이 보우
+각주
+APT[^APT] 공격은 공격 기술이 아닌 흐름으로
+[^APT]: APT는 Advance, Persistance, Threat의 두문어로
+코드블럭
+```javascript
+ aaa
+```
+글짜색
+&lt;span style=&quot;color:red&quot;&gt;내용&lt;/span&gt;
+
+테이블
+|column|column|column|
+|:-----|:-----:|-----:|
+|left|center|right|
+이미지 삽입
+![title](/images/2019-02-27-100-day-planning/20190227_162449.jpg '메모'){: width=&quot;100%&quot; height=&quot;100%&quot;}{: .center}
+링크
+[이름](주소)
+
+## Reference
+* [https://pivotal.io/cicd](https://pivotal.io/cicd)
+--&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/jekyll-install-onUbuntu/&quot;&gt;jekyll &amp; Github을 이용한 정적 사이트 구축&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on February 27, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[blog를 시작하며]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/sample-blog/" />
+  <id>http://localhost:4000/blog/sample-blog</id>
+  <updated>2019-01-22 01:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-01-22T10:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;일상 생활을 글로 남겨 보려 한다.&lt;br /&gt;
+무엇이든 좋다. 소소한 것부터 거창한 것까지&lt;br /&gt;
+부담은 갖지 말자. 공개 되어 있지만 나만 본다는 생각으로 일기처럼 작성하려 한다.&lt;/p&gt;
+
+&lt;h1 id=&quot;글을-써야하는-이유&quot;&gt;글을 써야하는 이유&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;생각이 정리된다.&lt;/li&gt;
+  &lt;li&gt;생각을 남길수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/sample-blog/&quot;&gt;blog를 시작하며&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on January 22, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+</feed>

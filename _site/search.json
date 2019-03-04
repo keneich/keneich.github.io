@@ -1,0 +1,91 @@
+[
+
+  
+    {
+      "title"			: "수영일기-201903월",
+      "link"			: "http://localhost:4000/blog/swimming/",
+      "excerpt"		: "2019년 3월의 수영을 기록한다."
+    }
+  
+
+  
+    ,{
+      "title"			: "독서일기-2번째 도전",
+      "link"			: "http://localhost:4000/blog/reading/",
+      "excerpt"		: "100일 33권에 다시 도전한다."
+    }
+  
+
+  
+    ,{
+      "title"			: "나의 100일 계획-2st",
+      "link"			: "http://localhost:4000/blog/100-day-planning2/",
+      "excerpt"		: "03월01일~06월08일까지"
+    }
+  
+
+  
+    ,{
+      "title"			: "수영일기-201902월",
+      "link"			: "http://localhost:4000/blog/swimming0227/",
+      "excerpt"		: "2019년 2월의 수영을 기록한다."
+    }
+  
+
+  
+    ,{
+      "title"			: "나의 100일 계획",
+      "link"			: "http://localhost:4000/blog/100-day-planning/",
+      "excerpt"		: "11월20일~2월27일까지"
+    }
+  
+
+  
+    ,{
+      "title"			: "jekyll & Github을 이용한 정적 사이트 구축",
+      "link"			: "http://localhost:4000/articles/jekyll-install-onUbuntu/",
+      "excerpt"		: "jekyll 설치 및 Github 정적사이트 구축"
+    }
+  
+
+  
+    ,{
+      "title"			: "blog를 시작하며",
+      "link"			: "http://localhost:4000/blog/sample-blog/",
+      "excerpt"		: "무엇이든 작성해 보자"
+    }
+  
+
+
+
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "About",
+      "link"			: "http://localhost:4000/about/",
+      "excerpt"		: "About keneich blog"
+    }
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+]
