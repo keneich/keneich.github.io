@@ -107,8 +107,7 @@ testblog$ bundle exec jekyll serve -H 192.168.1.88
 
 ![github](/images/2019-02-28-jekyll-install-onUbuntu/github01.png 'site'){: width="100%" height="100%"}{: .center}
 
-- 생성한 Repository에 jekyll로 생성한 testlog를 올려준다.
-    - git 작업을 위한 환경 설정(메일주소, 이름)과 초기화
+- 생성한 Repository에 jekyll로 생성한 testblog를 올려준다.
 
 ```shell
 
@@ -117,8 +116,8 @@ blog$ mkdir keneich.github.io
 blog$ cd keneich.github.io
 
 # git 사용을 위한 기본 환경 설정
-keneich.github.io$ git config --global user.email "keneich2@gmail.com"
-keneich.github.io$ git config --global user.name "keneich"
+keneich.github.io$ git config --global user.email "이메일"
+keneich.github.io$ git config --global user.name "이름"
 
 # git 사용을 위한 초기화
 keneich.github.io$ echo "# keneich.github.io" >> README.md

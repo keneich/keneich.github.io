@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-03-04T15:57:06+09:00</updated>
+<updated>2019-03-04T16:13:41+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>keneich</name>
@@ -466,11 +466,7 @@ Done installing documentation for bundler after 3 seconds
 &lt;p&gt;&lt;img src=&quot;/images/2019-02-28-jekyll-install-onUbuntu/github01.png&quot; alt=&quot;github&quot; title=&quot;site&quot; width=&quot;100%&quot; height=&quot;100%&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;생성한 Repository에 jekyll로 생성한 testlog를 올려준다.
-    &lt;ul&gt;
-      &lt;li&gt;git 작업을 위한 환경 설정(메일주소, 이름)과 초기화&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;생성한 Repository에 jekyll로 생성한 testblog를 올려준다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -479,8 +475,8 @@ blog&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir keneich.github.io
 blog&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;keneich.github.io
 
 &lt;span class=&quot;c&quot;&gt;# git 사용을 위한 기본 환경 설정&lt;/span&gt;
-keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;keneich2@gmail.com&quot;&lt;/span&gt;
-keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;keneich&quot;&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;이메일&quot;&lt;/span&gt;
+keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;이름&quot;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# git 사용을 위한 초기화&lt;/span&gt;
 keneich.github.io&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;# keneich.github.io&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; README.md
