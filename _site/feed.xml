@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-03-08T23:54:38+09:00</updated>
+<updated>2019-03-13T16:12:33+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>keneich</name>
@@ -27,6 +27,36 @@
   </author>
   <content type="html">
     &lt;h1 id=&quot;건강한-삶을-위해&quot;&gt;건강한 삶을 위해&lt;/h1&gt;
+
+&lt;h3 id=&quot;2019년-03월-11일-강습숏핀&quot;&gt;2019년 03월 11일 강습/숏핀&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
+  &lt;li&gt;시간 : 21:00 ~22:00&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 1,600
+    &lt;ul&gt;
+      &lt;li&gt;평균 스트로크 : 7.5&lt;/li&gt;
+      &lt;li&gt;평균 페이스 : 1분31초/100m&lt;/li&gt;
+      &lt;li&gt;이동시간/총운동시간: 24 / 43분&lt;/li&gt;
+      &lt;li&gt;칼로리 : 359&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;2019년-03월-09일-자유수영&quot;&gt;2019년 03월 09일 자유수영&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
+  &lt;li&gt;시간 : 20:00 ~21:00&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 1,600
+    &lt;ul&gt;
+      &lt;li&gt;평균 스트로크 : 9.0&lt;/li&gt;
+      &lt;li&gt;평균 페이스 : 1분41초/100m&lt;/li&gt;
+      &lt;li&gt;이동시간/총운동시간: 26 / 56분&lt;/li&gt;
+      &lt;li&gt;칼로리 : 334&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;스트로크 수가 9.0 이다. 8.x 대로 가즈아~&lt;/p&gt;
 
 &lt;h3 id=&quot;2019년-03월-08일-강습&quot;&gt;2019년 03월 08일 강습&lt;/h3&gt;
 &lt;ol&gt;
@@ -182,17 +212,19 @@
   <content type="html">
     &lt;h1 id=&quot;읽는-즐거움을-위해100일-33권-3월1일6월8일&quot;&gt;읽는 즐거움을 위해(100일 33권, 3월1일~6월8일)&lt;/h1&gt;
 
-&lt;h3 id=&quot;5-모든-관계는-말투에서-시작된다&quot;&gt;5. 모든 관계는 말투에서 시작된다.&lt;/h3&gt;
+&lt;h3 id=&quot;5-주식투자자의-시선&quot;&gt;5. 주식투자자의 시선&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;분류 : 자기계발&lt;/li&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
   &lt;li&gt;저자 : 김범준&lt;/li&gt;
-  &lt;li&gt;분량 : 200 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 03월08일&lt;/li&gt;
-  &lt;li&gt;읽기 완료 :&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=12149595&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;분량 : 276 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03/11&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 03/13&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=10346855&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;평!
     &lt;ul&gt;
-      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;주식 투자시 소액 투자자(개미)가 가져야할 마음 가짐에 대해서 많은 이야기를 해주고 있다.&lt;/li&gt;
+      &lt;li&gt;다년간 투자 경험을 바탕으로 독자에게 많은 것을 전달해 주려는 느낌을 받았다.&lt;/li&gt;
+      &lt;li&gt;기업과 동업한다는 생각으로 주식을 사라.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -204,12 +236,13 @@
   &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
   &lt;li&gt;저자 : 김범준&lt;/li&gt;
   &lt;li&gt;분량 : 270 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 03월08일&lt;/li&gt;
-  &lt;li&gt;읽기 완료 :&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 3/08&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 3/10&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=10933014&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;평!
     &lt;ul&gt;
-      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;상가 관련 책을 정독 한건 처음인거 같다.&lt;/li&gt;
+      &lt;li&gt;장사가 되는 자리를 볼줄 아는 안목을 기를 수 있다면, 대단히 매력적인 투자가 상가이다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -221,12 +254,14 @@
   &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
   &lt;li&gt;저자 : 김장섭&lt;/li&gt;
   &lt;li&gt;분량 : 270 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 03월04일&lt;/li&gt;
-  &lt;li&gt;읽기 완료 :&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 3/4&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 3/12&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14439900&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;평!
     &lt;ul&gt;
-      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;결국은 서울이다!&lt;/li&gt;
+      &lt;li&gt;좋은 집을 사려거든 고민하지 말고 비싼 집을 사라. 가격이 높다는건 대중에 의해서 좋은 집이라고 인정 받은 것이다.&lt;/li&gt;
+      &lt;li&gt;지방도 호재가 있으니 경제 기사를 눈여겨 보자&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
