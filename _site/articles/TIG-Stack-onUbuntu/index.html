@@ -204,13 +204,13 @@
 keneich@keneich:~<span class="nv">$ </span><span class="nb">sudo </span>netstat <span class="nt">-plntu</span>
 Active Internet connections <span class="o">(</span>only servers<span class="o">)</span>
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 127.0.0.53:53           0.0.0.0:<span class="k">*</span>               LISTEN      807/systemd-resolve 
+tcp        0      0 127.0.0.53:53           0.0.0.0:<span class="k">*</span>               LISTEN      807/systemd-resolve
 tcp        0      0 0.0.0.0:22              0.0.0.0:<span class="k">*</span>               LISTEN      1419/sshd           
 tcp        0      0 127.0.0.1:8088          0.0.0.0:<span class="k">*</span>               LISTEN      3204/influxd        
 tcp6       0      0 :::8086                 :::<span class="k">*</span>                    LISTEN      3204/influxd        
 tcp6       0      0 :::22                   :::<span class="k">*</span>                    LISTEN      1419/sshd           
-udp        0      0 127.0.0.53:53           0.0.0.0:<span class="k">*</span>                           807/systemd-resolve 
-udp6       0      0 fe80::a00:27ff:fe6a:546 :::<span class="k">*</span>                                790/systemd-network 
+udp        0      0 127.0.0.53:53           0.0.0.0:<span class="k">*</span>                           807/systemd-resolve
+udp6       0      0 fe80::a00:27ff:fe6a:546 :::<span class="k">*</span>                                790/systemd-network
 </code></pre></div></div>
 <ul>
   <li>8088과 8086 포트가 ‘LISTEN’ 상태이다.</li>
@@ -234,10 +234,10 @@ database 와 user를 확인한다.
 Connected to http://localhost:8086 version 1.7.4
 InfluxDB shell version: 1.7.4
 Enter an InfluxQL query
-<span class="o">&gt;</span> 
+<span class="o">&gt;</span>
 <span class="o">&gt;</span> create database telegraf
 <span class="o">&gt;</span> create user telegraf with password <span class="s1">'password'</span>
-<span class="o">&gt;</span> 
+<span class="o">&gt;</span>
 <span class="o">&gt;</span> show databases
 name: databases
 name
@@ -283,7 +283,7 @@ Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded processor
 Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded outputs: influxdb
 Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Tags enabled: <span class="nv">host</span><span class="o">=</span>keneich
 Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! <span class="o">[</span>agent] Config: Interval:10s, Quiet:false, Hostname:<span class="s2">"k
-keneich@keneich:~</span><span class="nv">$ </span><span class="s2">
+keneich@keneich:~</span><span class="err">$</span><span class="s2">
 
 </span></code></pre></div></div>
 
@@ -297,7 +297,7 @@ keneich@keneich:~</span><span class="nv">$ </span><span class="s2">
   <li>Output Plugins : Write용</li>
 </ol>
 
-<p>이번 과정에서는, 기본 input metric으로 사용하기 위해 telegraf를 설정한다. 
+<p>이번 과정에서는, 기본 input metric으로 사용하기 위해 telegraf를 설정한다.
 그리고 output Plugin으로 influxdb를 사용하기 위함이다.</p>
 
 <ul>
@@ -366,7 +366,7 @@ keneich@keneich:/etc/telegraf<span class="nv">$ </span><span class="nb">sudo </s
 keneich@keneich:/etc/telegraf<span class="nv">$ </span><span class="nb">sudo </span>telegraf <span class="nt">-test</span> <span class="nt">-config</span> /etc/telegraf/telegraf.conf <span class="nt">--input-filter</span> mem
 2019-03-20T05:34:18Z I! Starting Telegraf 1.10.1
 <span class="o">&gt;</span> mem,host<span class="o">=</span>keneich <span class="nv">active</span><span class="o">=</span>318726144i,available<span class="o">=</span>3748708352i,available_percent<span class="o">=</span>90.62133019120137,buffered<span class="o">=</span>28745728i,cached<span class="o">=</span>676098048i,commit_limit<span class="o">=</span>5547507712i,committed_as<span class="o">=</span>788303872i,dirty<span class="o">=</span>106496i,free<span class="o">=</span>3274629120i,high_free<span class="o">=</span>0i,high_total<span class="o">=</span>0i,huge_page_size<span class="o">=</span>2097152i,huge_pages_free<span class="o">=</span>0i,huge_pages_total<span class="o">=</span>0i,inactive<span class="o">=</span>423084032i,low_free<span class="o">=</span>0i,low_total<span class="o">=</span>0i,mapped<span class="o">=</span>107220992i,page_tables<span class="o">=</span>4558848i,shared<span class="o">=</span>1028096i,slab<span class="o">=</span>70643712i,swap_cached<span class="o">=</span>0i,swap_free<span class="o">=</span>3479171072i,swap_total<span class="o">=</span>3479171072i,total<span class="o">=</span>4136673280i,used<span class="o">=</span>157200384i,used_percent<span class="o">=</span>3.800164367827473,vmalloc_chunk<span class="o">=</span>0i,vmalloc_total<span class="o">=</span>35184372087808i,vmalloc_used<span class="o">=</span>0i,wired<span class="o">=</span>0i,write_back<span class="o">=</span>0i,write_back_tmp<span class="o">=</span>0i 1553060059000000000
-keneich@keneich:/etc/telegraf<span class="nv">$ </span>
+keneich@keneich:/etc/telegraf<span class="err">$</span>
 </code></pre></div></div>
 
 <p>InfluxDB 와 Telegraf configuration 이 완료 됬다.</p>
@@ -411,34 +411,56 @@ Login : admin / admin</p>
 
 <ul>
   <li>
-    <p>Click the ‘Add data source’ button to add the influxdb data source.</p>
+    <p>Influxdb data source 를 추가하기 위해 ‘Add data source’ 클릭한다.</p>
   </li>
   <li>
-    <p>Type details about the influxdb server configurations.</p>
+    <p>다음 설정 값을 등록한다.</p>
   </li>
 </ul>
 
 <p>Name: influxdb
 URL: http://localhost:8086/</p>
 
+<p><img src="/images/2019-03-20-TIG-Stack-onUbuntu/tig02.png" alt="TIG" /></p>
+
 <ul>
-  <li>Scroll to the bottom page and type details of influxdb database settings.</li>
+  <li>스트롤을 내려 influxdb database 설정 한다.</li>
 </ul>
 
-<p>Database: telegraf
+<p>InfluxDB Detail 항목
+Database: telegraf
 User: telegraf
 Password: ‘Password’</p>
 
-<p>Click the ‘Save and Test’ button and make sure you get the ‘Data source is working’ result.</p>
+<p>‘Save and Test’ button을 클릭하면
+‘Data source is working’ 이라는 결과 값이 보여야 한다.</p>
 
-<p>The InfluxDB data source has been added to the Grafana server.</p>
+<p><img src="/images/2019-03-20-TIG-Stack-onUbuntu/tig03.png" alt="TIG" /></p>
+
+<p>InfluxDB data 가 Grafana server에 추가되었다.</p>
 
 <h2 id="step-7---grafana-데쉬보드-구성">Step 7 - Grafana 데쉬보드 구성</h2>
+<p>Telegraf input plugin을 설정하여 grafana Dashboard를 import 한다.</p>
+
+<p>메뉴의 ‘+’ -&gt; ‘Import’ 를 클릭한다.</p>
+
+<p>Now open the sample Grafana dashboard from URL ‘https://grafana.com/dashboards/5955’ and click the ‘Copy the ID to Clipboard’ button.</p>
+
+<p>Paste the dashboard id.</p>
+
+<p>And you will be redirected automatically to the dashboard setup.</p>
+
+<p>On the options section, click the InfluxDB and choose your influxdb server, then click ‘Import’ button.</p>
+
+<p>아래 이미지와 같은 Dashboard를 볼수 있다.</p>
+
+<p><img src="/images/2019-03-20-TIG-Stack-onUbuntu/tig04.png" alt="TIG" /></p>
+
+<p>이제 TIG Stack (Telegraf, InfluxDB, and Grafana) 이 Ubuntu 18.04 에서 성공적으로 설치되었다.</p>
 
 <!--
 ![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig01.jpg){: width="300" height="400"}
 --->
-
 
         
           <div id="disqus_thread"></div><!-- /#disqus_thread -->

@@ -16,7 +16,7 @@ sitemap: true
 
 # TIG Stack(Telegraf, InfluxDB and Grafana) 설치 (on Ubuntu 18.04)
 
-- InfluxDB 는 Go로 쓰여진 시계열 database 오픈소스 이다. 
+- InfluxDB 는 Go로 쓰여진 시계열 database 오픈소스 이다.
 - Telegraf 는 collecting, processing, aggregating, and writing metrics을 위한 에이전트이다.
 - Grafana는 데이터를 시각화와 모니터링을 수행하는 오픈소스 이다.
 
@@ -68,18 +68,18 @@ sudo systemctl enable influxdb
 keneich@keneich:~$ sudo netstat -plntu
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      807/systemd-resolve 
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      807/systemd-resolve
 tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1419/sshd           
 tcp        0      0 127.0.0.1:8088          0.0.0.0:*               LISTEN      3204/influxd        
 tcp6       0      0 :::8086                 :::*                    LISTEN      3204/influxd        
 tcp6       0      0 :::22                   :::*                    LISTEN      1419/sshd           
-udp        0      0 127.0.0.53:53           0.0.0.0:*                           807/systemd-resolve 
-udp6       0      0 fe80::a00:27ff:fe6a:546 :::*                                790/systemd-network 
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           807/systemd-resolve
+udp6       0      0 fe80::a00:27ff:fe6a:546 :::*                                790/systemd-network
 ```
 - 8088과 8086 포트가 'LISTEN' 상태이다.
 
 ## Step 2 - InfluxDB Database 와 User 생성
-Telegraf 에이전트로 부터 데이터를 저장하기위해서, InfluxDB Database 와 User 구성이 필요하다. 
+Telegraf 에이전트로 부터 데이터를 저장하기위해서, InfluxDB Database 와 User 구성이 필요하다.
 
 - influxdb를 cli로 구동한다.
 
@@ -96,10 +96,10 @@ keneich@keneich:~$ influx
 Connected to http://localhost:8086 version 1.7.4
 InfluxDB shell version: 1.7.4
 Enter an InfluxQL query
-> 
+>
 > create database telegraf
 > create user telegraf with password 'password'
-> 
+>
 > show databases
 name: databases
 name
@@ -145,7 +145,7 @@ Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded processor
 Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded outputs: influxdb
 Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Tags enabled: host=keneich
 Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! [agent] Config: Interval:10s, Quiet:false, Hostname:"k
-keneich@keneich:~$ 
+keneich@keneich:~$
 
 ```
 
@@ -157,7 +157,7 @@ Telegraf 는 4가지 plugin 타입을 가진다.
 3. Aggregator Plugin : 결합(Aggregate)
 4. Output Plugins : Write용
 
-이번 과정에서는, 기본 input metric으로 사용하기 위해 telegraf를 설정한다. 
+이번 과정에서는, 기본 input metric으로 사용하기 위해 telegraf를 설정한다.
 그리고 output Plugin으로 influxdb를 사용하기 위함이다.
 
 - telegraf.conf 파일을 생성한다.
@@ -224,7 +224,7 @@ keneich@keneich:/etc/telegraf$ sudo telegraf -test -config /etc/telegraf/telegra
 keneich@keneich:/etc/telegraf$ sudo telegraf -test -config /etc/telegraf/telegraf.conf --input-filter mem
 2019-03-20T05:34:18Z I! Starting Telegraf 1.10.1
 > mem,host=keneich active=318726144i,available=3748708352i,available_percent=90.62133019120137,buffered=28745728i,cached=676098048i,commit_limit=5547507712i,committed_as=788303872i,dirty=106496i,free=3274629120i,high_free=0i,high_total=0i,huge_page_size=2097152i,huge_pages_free=0i,huge_pages_total=0i,inactive=423084032i,low_free=0i,low_total=0i,mapped=107220992i,page_tables=4558848i,shared=1028096i,slab=70643712i,swap_cached=0i,swap_free=3479171072i,swap_total=3479171072i,total=4136673280i,used=157200384i,used_percent=3.800164367827473,vmalloc_chunk=0i,vmalloc_total=35184372087808i,vmalloc_used=0i,wired=0i,write_back=0i,write_back_tmp=0i 1553060059000000000
-keneich@keneich:/etc/telegraf$ 
+keneich@keneich:/etc/telegraf$
 ```
 
 InfluxDB 와 Telegraf configuration 이 완료 됬다.
@@ -263,45 +263,48 @@ Login : admin / admin
 
 ![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig01.png)
 
-- Click the 'Add data source' button to add the influxdb data source.
+- Influxdb data source 를 추가하기 위해 'Add data source' 클릭한다.
 
-- Type details about the influxdb server configurations.
+- 다음 설정 값을 등록한다.
 
 Name: influxdb
 URL: http://localhost:8086/
 
-- Scroll to the bottom page and type details of influxdb database settings.
+![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig02.png)
 
+-  스트롤을 내려 influxdb database 설정 한다.
+
+InfluxDB Detail 항목
 Database: telegraf
 User: telegraf
 Password: 'Password'
 
-Click the 'Save and Test' button and make sure you get the 'Data source is working' result.
+'Save and Test' button을 클릭하면
+'Data source is working' 이라는 결과 값이 보여야 한다.
 
-The InfluxDB data source has been added to the Grafana server.
+![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig03.png)
+
+InfluxDB data 가 Grafana server에 추가되었다.
 
 ## Step 7 - Grafana 데쉬보드 구성
+Telegraf input plugin을 설정하여 grafana Dashboard를 import 한다.
 
+메뉴의 '+' -> 'Import' 를 클릭한다.
 
+Now open the sample Grafana dashboard from URL 'https://grafana.com/dashboards/5955' and click the 'Copy the ID to Clipboard' button.
 
+Paste the dashboard id.
 
+And you will be redirected automatically to the dashboard setup.
+
+On the options section, click the InfluxDB and choose your influxdb server, then click 'Import' button.
+
+아래 이미지와 같은 Dashboard를 볼수 있다.
+
+![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig04.png)
+
+이제 TIG Stack (Telegraf, InfluxDB, and Grafana) 이 Ubuntu 18.04 에서 성공적으로 설치되었다.
 
 <!--
 ![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig01.jpg){: width="300" height="400"}
 --->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
