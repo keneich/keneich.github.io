@@ -341,17 +341,19 @@ vim telegraf.conf
 </code></pre></div></div>
 
 <ul>
-  <li>
-    <p>재시작
-sudo systemctl restart telegraf</p>
-  </li>
-  <li>
-    <p>Now test the telegraf settings using the command below<br />
-sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter cpu
+  <li>재시작</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart telegraf
+</code></pre></div></div>
+
+<ul>
+  <li>다음 명령어를 사용하여 telegraf 설정을 테스트 한다.</li>
+</ul>
+
+<p>sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter cpu
 sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter net
 sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter mem</p>
-  </li>
-</ul>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keneich@keneich:/etc/telegraf<span class="nv">$ </span><span class="nb">sudo </span>telegraf <span class="nt">-test</span> <span class="nt">-config</span> /etc/telegraf/telegraf.conf <span class="nt">--input-filter</span> cpu
 2019-03-20T05:34:02Z I! Starting Telegraf 1.10.1
@@ -374,30 +376,38 @@ keneich@keneich:/etc/telegraf<span class="nv">$ </span>
 <p>이번 스텝에서는, 데이터 시각화를 위해 Grafana 데쉬보드를 설치할 것이다.</p>
 
 <ul>
-  <li>
-    <p>grafana 키와 레파지토리를 추가한다.
-sudo curl https://packages.grafana.com/gpg.key | sudo apt-key add -
-sudo echo ‘deb https://packages.grafana.com/oss/deb stable main’ &gt; /etc/apt/sources.list.d/grafana.list</p>
-  </li>
-  <li>
-    <p>grafana 패키지 설치
-sudo apt update
-sudo apt install grafana -y</p>
-  </li>
-  <li>
-    <p>grafana 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.
-sudo systemctl start grafana-server
-sudo systemctl enable grafana-server</p>
-  </li>
+  <li>grafana 키와 레파지토리를 추가한다.</li>
 </ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>curl https://packages.grafana.com/gpg.key | <span class="nb">sudo </span>apt-key add -
+<span class="nb">sudo echo</span> <span class="s1">'deb https://packages.grafana.com/oss/deb stable main'</span> <span class="o">&gt;</span> /etc/apt/sources.list.d/grafana.list
+</code></pre></div></div>
+
+<ul>
+  <li>grafana 패키지 설치</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt install grafana <span class="nt">-y</span>
+</code></pre></div></div>
+
+<ul>
+  <li>grafana 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start grafana-server
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>grafana-server
+</code></pre></div></div>
 
 <h2 id="step-6---grafana-설치">Step 6 - Grafana 설치</h2>
 <ul>
   <li>브라우저를 열고 IP:포트로 접속한다.</li>
 </ul>
 
-<p>http://192.168.1.99:3000
+<p>http://192.168.1.99:3000<br />
 Login : admin / admin</p>
+
+<p><img src="/images/2019-03-20-TIG-Stack-onUbuntu/tig01.png" alt="TIG" /></p>
 
 <ul>
   <li>
@@ -424,6 +434,10 @@ Password: ‘Password’</p>
 <p>The InfluxDB data source has been added to the Grafana server.</p>
 
 <h2 id="step-7---grafana-데쉬보드-구성">Step 7 - Grafana 데쉬보드 구성</h2>
+
+<!--
+![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig01.jpg){: width="300" height="400"}
+--->
 
 
         

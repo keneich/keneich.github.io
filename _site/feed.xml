@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-03-25T09:58:14+09:00</updated>
+<updated>2019-03-25T15:06:25+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>keneich</name>
@@ -224,17 +224,19 @@ vim telegraf.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;재시작
-sudo systemctl restart telegraf&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Now test the telegraf settings using the command below&lt;br /&gt;
-sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter cpu
+  &lt;li&gt;재시작&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl restart telegraf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다음 명령어를 사용하여 telegraf 설정을 테스트 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter cpu
 sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter net
 sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter mem&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;keneich@keneich:/etc/telegraf&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;telegraf &lt;span class=&quot;nt&quot;&gt;-test&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; /etc/telegraf/telegraf.conf &lt;span class=&quot;nt&quot;&gt;--input-filter&lt;/span&gt; cpu
 2019-03-20T05:34:02Z I! Starting Telegraf 1.10.1
@@ -257,30 +259,38 @@ keneich@keneich:/etc/telegraf&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;
 &lt;p&gt;이번 스텝에서는, 데이터 시각화를 위해 Grafana 데쉬보드를 설치할 것이다.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;grafana 키와 레파지토리를 추가한다.
-sudo curl https://packages.grafana.com/gpg.key | sudo apt-key add -
-sudo echo ‘deb https://packages.grafana.com/oss/deb stable main’ &amp;gt; /etc/apt/sources.list.d/grafana.list&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;grafana 패키지 설치
-sudo apt update
-sudo apt install grafana -y&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;grafana 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.
-sudo systemctl start grafana-server
-sudo systemctl enable grafana-server&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;grafana 키와 레파지토리를 추가한다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;curl https://packages.grafana.com/gpg.key | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-key add -
+&lt;span class=&quot;nb&quot;&gt;sudo echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'deb https://packages.grafana.com/oss/deb stable main'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /etc/apt/sources.list.d/grafana.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;grafana 패키지 설치&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install grafana &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;grafana 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start grafana-server
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;grafana-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;step-6---grafana-설치&quot;&gt;Step 6 - Grafana 설치&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;브라우저를 열고 IP:포트로 접속한다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;http://192.168.1.99:3000
+&lt;p&gt;http://192.168.1.99:3000&lt;br /&gt;
 Login : admin / admin&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-20-TIG-Stack-onUbuntu/tig01.png&quot; alt=&quot;TIG&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -307,6 +317,10 @@ Password: ‘Password’&lt;/p&gt;
 &lt;p&gt;The InfluxDB data source has been added to the Grafana server.&lt;/p&gt;
 
 &lt;h2 id=&quot;step-7---grafana-데쉬보드-구성&quot;&gt;Step 7 - Grafana 데쉬보드 구성&lt;/h2&gt;
+
+&lt;!--
+![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig01.jpg){: width=&quot;300&quot; height=&quot;400&quot;}
+---&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/TIG-Stack-onUbuntu/&quot;&gt;TIG Stack을 설치&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 20, 2019.&lt;/p&gt;

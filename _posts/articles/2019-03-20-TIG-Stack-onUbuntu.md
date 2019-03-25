@@ -199,13 +199,18 @@ vim telegraf.conf
   password = "hakase-ndlr"
 ```
 
-- 재시작
-sudo systemctl restart telegraf
+- 재시작  
 
-- Now test the telegraf settings using the command below  
+```shell
+sudo systemctl restart telegraf
+```
+
+- 다음 명령어를 사용하여 telegraf 설정을 테스트 한다.  
+
 sudo telegraf -test -config /etc/telegraf/telegraf.conf --input-filter cpu
 sudo telegraf -test -config /etc/telegraf/telegraf.conf --input-filter net
 sudo telegraf -test -config /etc/telegraf/telegraf.conf --input-filter mem
+
 
 ```shell
 keneich@keneich:/etc/telegraf$ sudo telegraf -test -config /etc/telegraf/telegraf.conf --input-filter cpu
@@ -229,23 +234,34 @@ InfluxDB 와 Telegraf configuration 이 완료 됬다.
 
 이번 스텝에서는, 데이터 시각화를 위해 Grafana 데쉬보드를 설치할 것이다.
 
-- grafana 키와 레파지토리를 추가한다.
+- grafana 키와 레파지토리를 추가한다.  
+
+```shell
 sudo curl https://packages.grafana.com/gpg.key | sudo apt-key add -
 sudo echo 'deb https://packages.grafana.com/oss/deb stable main' > /etc/apt/sources.list.d/grafana.list
+```
 
-- grafana 패키지 설치
+- grafana 패키지 설치  
+
+```shell
 sudo apt update
 sudo apt install grafana -y
+```
 
 - grafana 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.
+
+```shell
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
+```
 
 ## Step 6 - Grafana 설치
 - 브라우저를 열고 IP:포트로 접속한다.
 
-http://192.168.1.99:3000
+http://192.168.1.99:3000  
 Login : admin / admin
+
+![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig01.png)
 
 - Click the 'Add data source' button to add the influxdb data source.
 
@@ -270,7 +286,9 @@ The InfluxDB data source has been added to the Grafana server.
 
 
 
-
+<!--
+![TIG](/images/2019-03-20-TIG-Stack-onUbuntu/tig01.jpg){: width="300" height="400"}
+--->
 
 
 
