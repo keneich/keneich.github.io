@@ -1,0 +1,501 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TIG Stack을 설치 &#8211; Keneich's Blog</title>
+<meta name="description" content="Telegraf, InfluxDB, and Grafana on Ubuntu 18.04 LTS ">
+<meta name="keywords" content="telegraf, grafana, influxdb">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="TIG Stack을 설치">
+<meta name="twitter:description" content="Telegraf, InfluxDB, and Grafana on Ubuntu 18.04 LTS ">
+<meta name="twitter:site" content="@k_eneich">
+<meta name="twitter:creator" content="@k_eneich">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:4000/images/2019-03-20-TIG-Stack-onUbuntu/TIG.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIG Stack을 설치">
+<meta property="og:description" content="Telegraf, InfluxDB, and Grafana on Ubuntu 18.04 LTS ">
+<meta property="og:url" content="http://localhost:4000/articles/TIG-Stack-onUbuntu/">
+<meta property="og:site_name" content="Keneich's Blog">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/articles/TIG-Stack-onUbuntu/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Keneich's Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/articles/" >Articles</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/blog/" >Blog</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	
+		<div class="wrap">
+			<a href="http://localhost:4000/" class="site-logo" rel="home" title="Keneich's Blog"><img src="http://localhost:4000/images/logo2.png" width="200" height="200" alt="Keneich's Blog logo" class="animated fadeInDown"></a>
+		</div>
+	
+</header><!-- /.masthead -->
+
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <img src="http://localhost:4000/images/2019-03-20-TIG-Stack-onUbuntu/TIG.png" class="entry-feature-image" alt="TIG Stack을 설치" >
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#telegraf" title="Pages tagged telegraf">telegraf</a></li><li><a href="http://localhost:4000/tags/#grafana" title="Pages tagged grafana">grafana</a></li><li><a href="http://localhost:4000/tags/#influxdb" title="Pages tagged influxdb">influxdb</a></li>
+        </ul>
+        
+          <h1 class="entry-title">TIG Stack을 설치</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/nathan.png" class="bio-photo" alt="keneich bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">keneich</span></span>
+        <span class="entry-date date published"><time datetime="2019-03-20T10:05:27+09:00"><i class="fa fa-calendar-o"></i> March 20, 2019</time></span>
+        <span class="entry-date date modified"><time datetime="2019-03-20 01:05:27 +0000"><i class="fa fa-pencil"></i> March 20, 2019</time></span>
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=telegraf,grafana,influxdb&amp;text=TIG%20Stack을%20설치&amp;url=http://localhost:4000/articles/TIG-Stack-onUbuntu/&amp;via=k_eneich" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/TIG-Stack-onUbuntu/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://localhost:4000/articles/TIG-Stack-onUbuntu/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <h1 id="tig-stacktelegraf-influxdb-and-grafana-설치-on-ubuntu-1804">TIG Stack(Telegraf, InfluxDB and Grafana) 설치 (on Ubuntu 18.04)</h1>
+
+<ul>
+  <li>InfluxDB 는 Go로 쓰여진 시계열 database 오픈소스 이다.</li>
+  <li>Telegraf 는 collecting, processing, aggregating, and writing metrics을 위한 에이전트이다.</li>
+  <li>Grafana는 데이터를 시각화와 모니터링을 수행하는 오픈소스 이다.</li>
+</ul>
+
+<p>이번 포스팅은 Ubuntu 18.04에 TIG Stack을 설치 및 설정 하는 것을 보여준다.</p>
+
+<h2 id="사전-준비">사전 준비</h2>
+<ul>
+  <li>Ubuntu 18.04</li>
+  <li>Root 권한</li>
+</ul>
+
+<h2 id="해야할-것들">해야할 것들</h2>
+<ul>
+  <li>InfluxDB 설치</li>
+  <li>InfluxDB Database 와 User 생성</li>
+  <li>Telegraf 에이전트 설치</li>
+  <li>Telegraf 설정</li>
+  <li>Grafana 설치</li>
+  <li>Grafana Data Source 구축</li>
+  <li>Grafana Dashboard 구축</li>
+</ul>
+
+<h2 id="step-1---influxdb-설치">Step 1 - InfluxDB 설치</h2>
+<p>첫번째 과정으로, 우분투에 InfluxDB를 설치 한다.</p>
+
+<ul>
+  <li>influxdata Key 를 추가한다.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">sudo </span>curl <span class="nt">-sL</span> https://repos.influxdata.com/influxdb.key | <span class="nb">sudo </span>apt-key add -
+
+</code></pre></div></div>
+<ul>
+  <li>influxdata repository를 추가한다.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> /etc/lsb-release
+<span class="nb">echo</span> <span class="s2">"deb https://repos.influxdata.com/</span><span class="k">${</span><span class="nv">DISTRIB_ID</span><span class="p">,,</span><span class="k">}</span><span class="s2"> </span><span class="k">${</span><span class="nv">DISTRIB_CODENAME</span><span class="k">}</span><span class="s2"> stable"</span> | <span class="nb">sudo </span>tee /etc/apt/sources.list.d/influxdb.list
+</code></pre></div></div>
+
+<ul>
+  <li>repository를 업데이트 하고 아래  커맨드로 influxdb 패키지를 설치한다.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt install influxdb <span class="nt">-y</span>
+</code></pre></div>    </div>
+  </li>
+  <li>설치가 완료되면, influxdb 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start influxdb
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>influxdb
+
+keneich@keneich:~<span class="nv">$ </span><span class="nb">sudo </span>netstat <span class="nt">-plntu</span>
+Active Internet connections <span class="o">(</span>only servers<span class="o">)</span>
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.53:53           0.0.0.0:<span class="k">*</span>               LISTEN      807/systemd-resolve 
+tcp        0      0 0.0.0.0:22              0.0.0.0:<span class="k">*</span>               LISTEN      1419/sshd           
+tcp        0      0 127.0.0.1:8088          0.0.0.0:<span class="k">*</span>               LISTEN      3204/influxd        
+tcp6       0      0 :::8086                 :::<span class="k">*</span>                    LISTEN      3204/influxd        
+tcp6       0      0 :::22                   :::<span class="k">*</span>                    LISTEN      1419/sshd           
+udp        0      0 127.0.0.53:53           0.0.0.0:<span class="k">*</span>                           807/systemd-resolve 
+udp6       0      0 fe80::a00:27ff:fe6a:546 :::<span class="k">*</span>                                790/systemd-network 
+</code></pre></div></div>
+<ul>
+  <li>8088과 8086 포트가 ‘LISTEN’ 상태이다.</li>
+</ul>
+
+<h2 id="step-2---influxdb-database-와-user-생성">Step 2 - InfluxDB Database 와 User 생성</h2>
+<p>Telegraf 에이전트로 부터 데이터를 저장하기위해서, InfluxDB Database 와 User 구성이 필요하다.</p>
+
+<ul>
+  <li>influxdb를 cli로 구동한다.</li>
+</ul>
+
+<p>InfluxDB Database 와 User 생성</p>
+
+<p>8086 포트로 Influxdb server에 접속한다.
+DB를 생성하고 telegraf 과 패스워드를 설정한다.
+database 와 user를 확인한다.
+아래 influxdb 쿼리를 사용하여 사용하였다.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keneich@keneich:~<span class="nv">$ </span>influx
+Connected to http://localhost:8086 version 1.7.4
+InfluxDB shell version: 1.7.4
+Enter an InfluxQL query
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> create database telegraf
+<span class="o">&gt;</span> create user telegraf with password <span class="s1">'password'</span>
+<span class="o">&gt;</span> 
+<span class="o">&gt;</span> show databases
+name: databases
+name
+<span class="nt">----</span>
+_internal
+telegraf
+<span class="o">&gt;</span> show users
+user     admin
+<span class="nt">----</span>     <span class="nt">-----</span>
+telegraf <span class="nb">false</span>
+
+</code></pre></div></div>
+
+<h2 id="step-3---telegraf-에이전트를-설치한다">Step 3 - Telegraf 에이전트를 설치한다.</h2>
+<p>Telegraf는 influxdb가 생성된 같은 구성의 ‘influxdata’에 의해 생성되었다.
+그리고 influxdata key와 repository가 추가되었다.</p>
+
+<ul>
+  <li>telegraf 패키지를 설치한다.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt install telegraf <span class="nt">-y</span>
+</code></pre></div>    </div>
+  </li>
+  <li>설치가 완료되면, telegraf 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keneich@keneich:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl start telegraf
+keneich@keneich:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl <span class="nb">enable </span>telegraf
+keneich@keneich:~<span class="nv">$ </span><span class="nb">sudo </span>systemctl status telegraf
+● telegraf.service - The plugin-driven server agent <span class="k">for </span>reporting metrics into InfluxDB
+   Loaded: loaded <span class="o">(</span>/lib/systemd/system/telegraf.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+   Active: active <span class="o">(</span>running<span class="o">)</span> since Wed 2019-03-20 05:02:35 UTC<span class="p">;</span> 2min 42s ago
+     Docs: https://github.com/influxdata/telegraf
+ Main PID: 3414 <span class="o">(</span>telegraf<span class="o">)</span>
+    Tasks: 8 <span class="o">(</span>limit: 4662<span class="o">)</span>
+   CGroup: /system.slice/telegraf.service
+           └─3414 /usr/bin/telegraf <span class="nt">-config</span> /etc/telegraf/telegraf.conf <span class="nt">-config-directory</span> /etc/telegraf/telegraf.d
+
+Mar 20 05:02:35 keneich systemd[1]: Started The plugin-driven server agent <span class="k">for </span>reporting metrics into InfluxDB.
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Starting Telegraf 1.10.1
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded inputs: mem processes swap system cpu disk disk
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded aggregators:
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded processors:
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded outputs: influxdb
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Tags enabled: <span class="nv">host</span><span class="o">=</span>keneich
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! <span class="o">[</span>agent] Config: Interval:10s, Quiet:false, Hostname:<span class="s2">"k
+keneich@keneich:~</span><span class="nv">$ </span><span class="s2">
+
+</span></code></pre></div></div>
+
+<h2 id="step-4---configure-telegraf">Step 4 - Configure Telegraf</h2>
+<p>Telegraf 는 4가지 plugin 타입을 가진다.</p>
+
+<ol>
+  <li>input Plugins : 수집용</li>
+  <li>Processor Plugins : 변형, 가공, 필터링</li>
+  <li>Aggregator Plugin : 결합(Aggregate)</li>
+  <li>Output Plugins : Write용</li>
+</ol>
+
+<p>이번 과정에서는, 기본 input metric으로 사용하기 위해 telegraf를 설정한다. 
+그리고 output Plugin으로 influxdb를 사용하기 위함이다.</p>
+
+<ul>
+  <li>telegraf.conf 파일을 생성한다.</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /etc/telegraf/
+mv telegraf.conf telegraf.conf.default
+vim telegraf.conf
+
+<span class="c"># Global Agent Configuration</span>
+<span class="o">[</span>agent]
+  hostname <span class="o">=</span> <span class="s2">"hakase-tig"</span>
+  flush_interval <span class="o">=</span> <span class="s2">"15s"</span>
+  interval <span class="o">=</span> <span class="s2">"15s"</span>
+
+
+<span class="c"># Input Plugins</span>
+<span class="o">[[</span>inputs.cpu]]
+    percpu <span class="o">=</span> <span class="nb">true
+    </span>totalcpu <span class="o">=</span> <span class="nb">true
+    </span>collect_cpu_time <span class="o">=</span> <span class="nb">false
+    </span>report_active <span class="o">=</span> <span class="nb">false</span>
+<span class="o">[[</span>inputs.disk]]
+    ignore_fs <span class="o">=</span> <span class="o">[</span><span class="s2">"tmpfs"</span>, <span class="s2">"devtmpfs"</span>, <span class="s2">"devfs"</span><span class="o">]</span>
+<span class="o">[[</span>inputs.io]]
+<span class="o">[[</span>inputs.mem]]
+<span class="o">[[</span>inputs.net]]
+<span class="o">[[</span>inputs.system]]
+<span class="o">[[</span>inputs.swap]]
+<span class="o">[[</span>inputs.netstat]]
+<span class="o">[[</span>inputs.processes]]
+<span class="o">[[</span>inputs.kernel]]
+
+<span class="c"># Output Plugin InfluxDB</span>
+<span class="o">[[</span>outputs.influxdb]]
+  database <span class="o">=</span> <span class="s2">"telegraf"</span>
+  urls <span class="o">=</span> <span class="o">[</span> <span class="s2">"http://127.0.0.1:8086"</span> <span class="o">]</span>
+  username <span class="o">=</span> <span class="s2">"telegraf"</span>
+  password <span class="o">=</span> <span class="s2">"hakase-ndlr"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>재시작
+sudo systemctl restart telegraf</p>
+  </li>
+  <li>
+    <p>Now test the telegraf settings using the command below<br />
+sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter cpu
+sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter net
+sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter mem</p>
+  </li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keneich@keneich:/etc/telegraf<span class="nv">$ </span><span class="nb">sudo </span>telegraf <span class="nt">-test</span> <span class="nt">-config</span> /etc/telegraf/telegraf.conf <span class="nt">--input-filter</span> cpu
+2019-03-20T05:34:02Z I! Starting Telegraf 1.10.1
+<span class="o">&gt;</span> cpu,cpu<span class="o">=</span>cpu0,host<span class="o">=</span>keneich <span class="nv">usage_guest</span><span class="o">=</span>0,usage_guest_nice<span class="o">=</span>0,usage_idle<span class="o">=</span>100,usage_iowait<span class="o">=</span>0,usage_irq<span class="o">=</span>0,usage_nice<span class="o">=</span>0,usage_softirq<span class="o">=</span>0,usage_steal<span class="o">=</span>0,usage_system<span class="o">=</span>0,usage_user<span class="o">=</span>0 1553060043000000000
+<span class="o">&gt;</span> cpu,cpu<span class="o">=</span>cpu-total,host<span class="o">=</span>keneich <span class="nv">usage_guest</span><span class="o">=</span>0,usage_guest_nice<span class="o">=</span>0,usage_idle<span class="o">=</span>100,usage_iowait<span class="o">=</span>0,usage_irq<span class="o">=</span>0,usage_nice<span class="o">=</span>0,usage_softirq<span class="o">=</span>0,usage_steal<span class="o">=</span>0,usage_system<span class="o">=</span>0,usage_user<span class="o">=</span>0 1553060043000000000
+keneich@keneich:/etc/telegraf<span class="nv">$ </span><span class="nb">sudo </span>telegraf <span class="nt">-test</span> <span class="nt">-config</span> /etc/telegraf/telegraf.conf <span class="nt">--input-filter</span> net
+2019-03-20T05:34:11Z I! Starting Telegraf 1.10.1
+<span class="o">&gt;</span> net,host<span class="o">=</span>keneich,interface<span class="o">=</span>enp0s3 <span class="nv">bytes_recv</span><span class="o">=</span>70130014i,bytes_sent<span class="o">=</span>1311552i,drop_in<span class="o">=</span>0i,drop_out<span class="o">=</span>0i,err_in<span class="o">=</span>0i,err_out<span class="o">=</span>0i,packets_recv<span class="o">=</span>56990i,packets_sent<span class="o">=</span>13585i 1553060051000000000
+<span class="o">&gt;</span> net,host<span class="o">=</span>keneich,interface<span class="o">=</span>all <span class="nv">icmp_inaddrmaskreps</span><span class="o">=</span>0i,icmp_inaddrmasks<span class="o">=</span>0i,icmp_incsumerrors<span class="o">=</span>0i,icmp_indestunreachs<span class="o">=</span>80i,icmp_inechoreps<span class="o">=</span>2i,icmp_inechos<span class="o">=</span>0i,icmp_inerrors<span class="o">=</span>0i,icmp_inmsgs<span class="o">=</span>82i,icmp_inparmprobs<span class="o">=</span>0i,icmp_inredirects<span class="o">=</span>0i,icmp_insrcquenchs<span class="o">=</span>0i,icmp_intimeexcds<span class="o">=</span>0i,icmp_intimestampreps<span class="o">=</span>0i,icmp_intimestamps<span class="o">=</span>0i,icmp_outaddrmaskreps<span class="o">=</span>0i,icmp_outaddrmasks<span class="o">=</span>0i,icmp_outdestunreachs<span class="o">=</span>80i,icmp_outechoreps<span class="o">=</span>0i,icmp_outechos<span class="o">=</span>2i,icmp_outerrors<span class="o">=</span>0i,icmp_outmsgs<span class="o">=</span>82i,icmp_outparmprobs<span class="o">=</span>0i,icmp_outredirects<span class="o">=</span>0i,icmp_outsrcquenchs<span class="o">=</span>0i,icmp_outtimeexcds<span class="o">=</span>0i,icmp_outtimestampreps<span class="o">=</span>0i,icmp_outtimestamps<span class="o">=</span>0i,icmpmsg_intype0<span class="o">=</span>2i,icmpmsg_intype3<span class="o">=</span>80i,icmpmsg_outtype3<span class="o">=</span>80i,icmpmsg_outtype8<span class="o">=</span>2i,ip_defaultttl<span class="o">=</span>64i,ip_forwarding<span class="o">=</span>2i,ip_forwdatagrams<span class="o">=</span>0i,ip_fragcreates<span class="o">=</span>0i,ip_fragfails<span class="o">=</span>0i,ip_fragoks<span class="o">=</span>0i,ip_inaddrerrors<span class="o">=</span>0i,ip_indelivers<span class="o">=</span>57600i,ip_indiscards<span class="o">=</span>0i,ip_inhdrerrors<span class="o">=</span>0i,ip_inreceives<span class="o">=</span>57600i,ip_inunknownprotos<span class="o">=</span>0i,ip_outdiscards<span class="o">=</span>40i,ip_outnoroutes<span class="o">=</span>0i,ip_outrequests<span class="o">=</span>14131i,ip_reasmfails<span class="o">=</span>0i,ip_reasmoks<span class="o">=</span>0i,ip_reasmreqds<span class="o">=</span>0i,ip_reasmtimeout<span class="o">=</span>0i,tcp_activeopens<span class="o">=</span>22i,tcp_attemptfails<span class="o">=</span>0i,tcp_currestab<span class="o">=</span>3i,tcp_estabresets<span class="o">=</span>1i,tcp_incsumerrors<span class="o">=</span>0i,tcp_inerrs<span class="o">=</span>0i,tcp_insegs<span class="o">=</span>61662i,tcp_maxconn<span class="o">=</span><span class="nt">-1i</span>,tcp_outrsts<span class="o">=</span>9i,tcp_outsegs<span class="o">=</span>18270i,tcp_passiveopens<span class="o">=</span>5i,tcp_retranssegs<span class="o">=</span>3i,tcp_rtoalgorithm<span class="o">=</span>1i,tcp_rtomax<span class="o">=</span>120000i,tcp_rtomin<span class="o">=</span>200i,udp_ignoredmulti<span class="o">=</span>24i,udp_incsumerrors<span class="o">=</span>0i,udp_indatagrams<span class="o">=</span>718i,udp_inerrors<span class="o">=</span>0i,udp_noports<span class="o">=</span>80i,udp_outdatagrams<span class="o">=</span>801i,udp_rcvbuferrors<span class="o">=</span>0i,udp_sndbuferrors<span class="o">=</span>0i,udplite_ignoredmulti<span class="o">=</span>0i,udplite_incsumerrors<span class="o">=</span>0i,udplite_indatagrams<span class="o">=</span>0i,udplite_inerrors<span class="o">=</span>0i,udplite_noports<span class="o">=</span>0i,udplite_outdatagrams<span class="o">=</span>0i,udplite_rcvbuferrors<span class="o">=</span>0i,udplite_sndbuferrors<span class="o">=</span>0i 1553060051000000000
+keneich@keneich:/etc/telegraf<span class="nv">$ </span><span class="nb">sudo </span>telegraf <span class="nt">-test</span> <span class="nt">-config</span> /etc/telegraf/telegraf.conf <span class="nt">--input-filter</span> mem
+2019-03-20T05:34:18Z I! Starting Telegraf 1.10.1
+<span class="o">&gt;</span> mem,host<span class="o">=</span>keneich <span class="nv">active</span><span class="o">=</span>318726144i,available<span class="o">=</span>3748708352i,available_percent<span class="o">=</span>90.62133019120137,buffered<span class="o">=</span>28745728i,cached<span class="o">=</span>676098048i,commit_limit<span class="o">=</span>5547507712i,committed_as<span class="o">=</span>788303872i,dirty<span class="o">=</span>106496i,free<span class="o">=</span>3274629120i,high_free<span class="o">=</span>0i,high_total<span class="o">=</span>0i,huge_page_size<span class="o">=</span>2097152i,huge_pages_free<span class="o">=</span>0i,huge_pages_total<span class="o">=</span>0i,inactive<span class="o">=</span>423084032i,low_free<span class="o">=</span>0i,low_total<span class="o">=</span>0i,mapped<span class="o">=</span>107220992i,page_tables<span class="o">=</span>4558848i,shared<span class="o">=</span>1028096i,slab<span class="o">=</span>70643712i,swap_cached<span class="o">=</span>0i,swap_free<span class="o">=</span>3479171072i,swap_total<span class="o">=</span>3479171072i,total<span class="o">=</span>4136673280i,used<span class="o">=</span>157200384i,used_percent<span class="o">=</span>3.800164367827473,vmalloc_chunk<span class="o">=</span>0i,vmalloc_total<span class="o">=</span>35184372087808i,vmalloc_used<span class="o">=</span>0i,wired<span class="o">=</span>0i,write_back<span class="o">=</span>0i,write_back_tmp<span class="o">=</span>0i 1553060059000000000
+keneich@keneich:/etc/telegraf<span class="nv">$ </span>
+</code></pre></div></div>
+
+<p>InfluxDB 와 Telegraf configuration 이 완료 됬다.</p>
+
+<h2 id="step-5---grafana-설치">Step 5 - Grafana 설치</h2>
+
+<p>이번 스텝에서는, 데이터 시각화를 위해 Grafana 데쉬보드를 설치할 것이다.</p>
+
+<ul>
+  <li>
+    <p>grafana 키와 레파지토리를 추가한다.
+sudo curl https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo echo ‘deb https://packages.grafana.com/oss/deb stable main’ &gt; /etc/apt/sources.list.d/grafana.list</p>
+  </li>
+  <li>
+    <p>grafana 패키지 설치
+sudo apt update
+sudo apt install grafana -y</p>
+  </li>
+  <li>
+    <p>grafana 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server</p>
+  </li>
+</ul>
+
+<h2 id="step-6---grafana-설치">Step 6 - Grafana 설치</h2>
+<ul>
+  <li>브라우저를 열고 IP:포트로 접속한다.</li>
+</ul>
+
+<p>http://192.168.1.99:3000
+Login : admin / admin</p>
+
+<ul>
+  <li>
+    <p>Click the ‘Add data source’ button to add the influxdb data source.</p>
+  </li>
+  <li>
+    <p>Type details about the influxdb server configurations.</p>
+  </li>
+</ul>
+
+<p>Name: influxdb
+URL: http://localhost:8086/</p>
+
+<ul>
+  <li>Scroll to the bottom page and type details of influxdb database settings.</li>
+</ul>
+
+<p>Database: telegraf
+User: telegraf
+Password: ‘Password’</p>
+
+<p>Click the ‘Save and Test’ button and make sure you get the ‘Data source is working’ result.</p>
+
+<p>The InfluxDB data source has been added to the Grafana server.</p>
+
+<h2 id="step-7---grafana-데쉬보드-구성">Step 7 - Grafana 데쉬보드 구성</h2>
+
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'keneich-blog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/blog/swimming/" class="btn" title="수영일기-201903월">Previous</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2019 keneich. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/k_eneich" title="keneich on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="https://facebook.com/keneich" title="keneich on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://github.com/keneich" title="keneich on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+
+
+</body>
+</html>

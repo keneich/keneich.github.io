@@ -4,13 +4,314 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-03-24T17:04:40+09:00</updated>
+<updated>2019-03-25T09:58:14+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>keneich</name>
   <uri>http://localhost:4000/</uri>
   <email>keneich2@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[TIG Stack을 설치]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/TIG-Stack-onUbuntu/" />
+  <id>http://localhost:4000/articles/TIG-Stack-onUbuntu</id>
+  <updated>2019-03-20 01:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-03-20T10:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;tig-stacktelegraf-influxdb-and-grafana-설치-on-ubuntu-1804&quot;&gt;TIG Stack(Telegraf, InfluxDB and Grafana) 설치 (on Ubuntu 18.04)&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;InfluxDB 는 Go로 쓰여진 시계열 database 오픈소스 이다.&lt;/li&gt;
+  &lt;li&gt;Telegraf 는 collecting, processing, aggregating, and writing metrics을 위한 에이전트이다.&lt;/li&gt;
+  &lt;li&gt;Grafana는 데이터를 시각화와 모니터링을 수행하는 오픈소스 이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이번 포스팅은 Ubuntu 18.04에 TIG Stack을 설치 및 설정 하는 것을 보여준다.&lt;/p&gt;
+
+&lt;h2 id=&quot;사전-준비&quot;&gt;사전 준비&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ubuntu 18.04&lt;/li&gt;
+  &lt;li&gt;Root 권한&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;해야할-것들&quot;&gt;해야할 것들&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;InfluxDB 설치&lt;/li&gt;
+  &lt;li&gt;InfluxDB Database 와 User 생성&lt;/li&gt;
+  &lt;li&gt;Telegraf 에이전트 설치&lt;/li&gt;
+  &lt;li&gt;Telegraf 설정&lt;/li&gt;
+  &lt;li&gt;Grafana 설치&lt;/li&gt;
+  &lt;li&gt;Grafana Data Source 구축&lt;/li&gt;
+  &lt;li&gt;Grafana Dashboard 구축&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-1---influxdb-설치&quot;&gt;Step 1 - InfluxDB 설치&lt;/h2&gt;
+&lt;p&gt;첫번째 과정으로, 우분투에 InfluxDB를 설치 한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;influxdata Key 를 추가한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-sL&lt;/span&gt; https://repos.influxdata.com/influxdb.key | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-key add -
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;influxdata repository를 추가한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /etc/lsb-release
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;deb https://repos.influxdata.com/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DISTRIB_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DISTRIB_CODENAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; stable&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;tee /etc/apt/sources.list.d/influxdb.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;repository를 업데이트 하고 아래  커맨드로 influxdb 패키지를 설치한다.
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install influxdb &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;설치가 완료되면, influxdb 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start influxdb
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;influxdb
+
+keneich@keneich:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;netstat &lt;span class=&quot;nt&quot;&gt;-plntu&lt;/span&gt;
+Active Internet connections &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;only servers&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.53:53           0.0.0.0:&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;               LISTEN      807/systemd-resolve 
+tcp        0      0 0.0.0.0:22              0.0.0.0:&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;               LISTEN      1419/sshd           
+tcp        0      0 127.0.0.1:8088          0.0.0.0:&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;               LISTEN      3204/influxd        
+tcp6       0      0 :::8086                 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                    LISTEN      3204/influxd        
+tcp6       0      0 :::22                   :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                    LISTEN      1419/sshd           
+udp        0      0 127.0.0.53:53           0.0.0.0:&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                           807/systemd-resolve 
+udp6       0      0 fe80::a00:27ff:fe6a:546 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;                                790/systemd-network 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;8088과 8086 포트가 ‘LISTEN’ 상태이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-2---influxdb-database-와-user-생성&quot;&gt;Step 2 - InfluxDB Database 와 User 생성&lt;/h2&gt;
+&lt;p&gt;Telegraf 에이전트로 부터 데이터를 저장하기위해서, InfluxDB Database 와 User 구성이 필요하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;influxdb를 cli로 구동한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;InfluxDB Database 와 User 생성&lt;/p&gt;
+
+&lt;p&gt;8086 포트로 Influxdb server에 접속한다.
+DB를 생성하고 telegraf 과 패스워드를 설정한다.
+database 와 user를 확인한다.
+아래 influxdb 쿼리를 사용하여 사용하였다.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;keneich@keneich:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;influx
+Connected to http://localhost:8086 version 1.7.4
+InfluxDB shell version: 1.7.4
+Enter an InfluxQL query
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; create database telegraf
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; create user telegraf with password &lt;span class=&quot;s1&quot;&gt;'password'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; show databases
+name: databases
+name
+&lt;span class=&quot;nt&quot;&gt;----&lt;/span&gt;
+_internal
+telegraf
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; show users
+user     admin
+&lt;span class=&quot;nt&quot;&gt;----&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;-----&lt;/span&gt;
+telegraf &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;step-3---telegraf-에이전트를-설치한다&quot;&gt;Step 3 - Telegraf 에이전트를 설치한다.&lt;/h2&gt;
+&lt;p&gt;Telegraf는 influxdb가 생성된 같은 구성의 ‘influxdata’에 의해 생성되었다.
+그리고 influxdata key와 repository가 추가되었다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;telegraf 패키지를 설치한다.
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install telegraf &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;설치가 완료되면, telegraf 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;keneich@keneich:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start telegraf
+keneich@keneich:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;telegraf
+keneich@keneich:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl status telegraf
+● telegraf.service - The plugin-driven server agent &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;reporting metrics into InfluxDB
+   Loaded: loaded &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/lib/systemd/system/telegraf.service&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; enabled&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; vendor preset: enabled&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   Active: active &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;running&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; since Wed 2019-03-20 05:02:35 UTC&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 2min 42s ago
+     Docs: https://github.com/influxdata/telegraf
+ Main PID: 3414 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;telegraf&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    Tasks: 8 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;limit: 4662&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   CGroup: /system.slice/telegraf.service
+           └─3414 /usr/bin/telegraf &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; /etc/telegraf/telegraf.conf &lt;span class=&quot;nt&quot;&gt;-config-directory&lt;/span&gt; /etc/telegraf/telegraf.d
+
+Mar 20 05:02:35 keneich systemd[1]: Started The plugin-driven server agent &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;reporting metrics into InfluxDB.
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Starting Telegraf 1.10.1
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded inputs: mem processes swap system cpu disk disk
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded aggregators:
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded processors:
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Loaded outputs: influxdb
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! Tags enabled: &lt;span class=&quot;nv&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;keneich
+Mar 20 05:02:35 keneich telegraf[3414]: 2019-03-20T05:02:35Z I! &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;agent] Config: Interval:10s, Quiet:false, Hostname:&lt;span class=&quot;s2&quot;&gt;&quot;k
+keneich@keneich:~&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;step-4---configure-telegraf&quot;&gt;Step 4 - Configure Telegraf&lt;/h2&gt;
+&lt;p&gt;Telegraf 는 4가지 plugin 타입을 가진다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;input Plugins : 수집용&lt;/li&gt;
+  &lt;li&gt;Processor Plugins : 변형, 가공, 필터링&lt;/li&gt;
+  &lt;li&gt;Aggregator Plugin : 결합(Aggregate)&lt;/li&gt;
+  &lt;li&gt;Output Plugins : Write용&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이번 과정에서는, 기본 input metric으로 사용하기 위해 telegraf를 설정한다. 
+그리고 output Plugin으로 influxdb를 사용하기 위함이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;telegraf.conf 파일을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /etc/telegraf/
+mv telegraf.conf telegraf.conf.default
+vim telegraf.conf
+
+&lt;span class=&quot;c&quot;&gt;# Global Agent Configuration&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;agent]
+  hostname &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hakase-tig&quot;&lt;/span&gt;
+  flush_interval &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;15s&quot;&lt;/span&gt;
+  interval &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;15s&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# Input Plugins&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.cpu]]
+    percpu &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+    &lt;/span&gt;totalcpu &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+    &lt;/span&gt;collect_cpu_time &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false
+    &lt;/span&gt;report_active &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.disk]]
+    ignore_fs &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tmpfs&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;devtmpfs&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;devfs&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.io]]
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.mem]]
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.net]]
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.system]]
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.swap]]
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.netstat]]
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.processes]]
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;inputs.kernel]]
+
+&lt;span class=&quot;c&quot;&gt;# Output Plugin InfluxDB&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;outputs.influxdb]]
+  database &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;telegraf&quot;&lt;/span&gt;
+  urls &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://127.0.0.1:8086&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+  username &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;telegraf&quot;&lt;/span&gt;
+  password &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hakase-ndlr&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;재시작
+sudo systemctl restart telegraf&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now test the telegraf settings using the command below&lt;br /&gt;
+sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter cpu
+sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter net
+sudo telegraf -test -config /etc/telegraf/telegraf.conf –input-filter mem&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;keneich@keneich:/etc/telegraf&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;telegraf &lt;span class=&quot;nt&quot;&gt;-test&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; /etc/telegraf/telegraf.conf &lt;span class=&quot;nt&quot;&gt;--input-filter&lt;/span&gt; cpu
+2019-03-20T05:34:02Z I! Starting Telegraf 1.10.1
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; cpu,cpu&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cpu0,host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;keneich &lt;span class=&quot;nv&quot;&gt;usage_guest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_guest_nice&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_idle&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100,usage_iowait&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_irq&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_nice&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_softirq&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_steal&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_system&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 1553060043000000000
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; cpu,cpu&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cpu-total,host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;keneich &lt;span class=&quot;nv&quot;&gt;usage_guest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_guest_nice&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_idle&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100,usage_iowait&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_irq&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_nice&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_softirq&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_steal&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_system&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,usage_user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 1553060043000000000
+keneich@keneich:/etc/telegraf&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;telegraf &lt;span class=&quot;nt&quot;&gt;-test&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; /etc/telegraf/telegraf.conf &lt;span class=&quot;nt&quot;&gt;--input-filter&lt;/span&gt; net
+2019-03-20T05:34:11Z I! Starting Telegraf 1.10.1
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; net,host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;keneich,interface&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;enp0s3 &lt;span class=&quot;nv&quot;&gt;bytes_recv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;70130014i,bytes_sent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1311552i,drop_in&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,drop_out&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,err_in&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,err_out&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,packets_recv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;56990i,packets_sent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;13585i 1553060051000000000
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; net,host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;keneich,interface&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;all &lt;span class=&quot;nv&quot;&gt;icmp_inaddrmaskreps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_inaddrmasks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_incsumerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_indestunreachs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;80i,icmp_inechoreps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2i,icmp_inechos&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_inerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_inmsgs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;82i,icmp_inparmprobs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_inredirects&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_insrcquenchs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_intimeexcds&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_intimestampreps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_intimestamps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outaddrmaskreps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outaddrmasks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outdestunreachs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;80i,icmp_outechoreps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outechos&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2i,icmp_outerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outmsgs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;82i,icmp_outparmprobs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outredirects&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outsrcquenchs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outtimeexcds&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outtimestampreps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmp_outtimestamps&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,icmpmsg_intype0&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2i,icmpmsg_intype3&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;80i,icmpmsg_outtype3&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;80i,icmpmsg_outtype8&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2i,ip_defaultttl&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;64i,ip_forwarding&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2i,ip_forwdatagrams&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_fragcreates&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_fragfails&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_fragoks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_inaddrerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_indelivers&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;57600i,ip_indiscards&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_inhdrerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_inreceives&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;57600i,ip_inunknownprotos&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_outdiscards&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;40i,ip_outnoroutes&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_outrequests&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;14131i,ip_reasmfails&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_reasmoks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_reasmreqds&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,ip_reasmtimeout&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,tcp_activeopens&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;22i,tcp_attemptfails&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,tcp_currestab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3i,tcp_estabresets&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1i,tcp_incsumerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,tcp_inerrs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,tcp_insegs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;61662i,tcp_maxconn&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-1i&lt;/span&gt;,tcp_outrsts&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;9i,tcp_outsegs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;18270i,tcp_passiveopens&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5i,tcp_retranssegs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3i,tcp_rtoalgorithm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1i,tcp_rtomax&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;120000i,tcp_rtomin&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;200i,udp_ignoredmulti&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;24i,udp_incsumerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udp_indatagrams&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;718i,udp_inerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udp_noports&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;80i,udp_outdatagrams&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;801i,udp_rcvbuferrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udp_sndbuferrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_ignoredmulti&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_incsumerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_indatagrams&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_inerrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_noports&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_outdatagrams&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_rcvbuferrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,udplite_sndbuferrors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i 1553060051000000000
+keneich@keneich:/etc/telegraf&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;telegraf &lt;span class=&quot;nt&quot;&gt;-test&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; /etc/telegraf/telegraf.conf &lt;span class=&quot;nt&quot;&gt;--input-filter&lt;/span&gt; mem
+2019-03-20T05:34:18Z I! Starting Telegraf 1.10.1
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; mem,host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;keneich &lt;span class=&quot;nv&quot;&gt;active&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;318726144i,available&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3748708352i,available_percent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;90.62133019120137,buffered&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;28745728i,cached&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;676098048i,commit_limit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5547507712i,committed_as&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;788303872i,dirty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;106496i,free&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3274629120i,high_free&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,high_total&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,huge_page_size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2097152i,huge_pages_free&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,huge_pages_total&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,inactive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;423084032i,low_free&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,low_total&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,mapped&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;107220992i,page_tables&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4558848i,shared&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1028096i,slab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;70643712i,swap_cached&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,swap_free&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3479171072i,swap_total&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3479171072i,total&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4136673280i,used&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;157200384i,used_percent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3.800164367827473,vmalloc_chunk&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,vmalloc_total&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;35184372087808i,vmalloc_used&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,wired&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,write_back&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i,write_back_tmp&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0i 1553060059000000000
+keneich@keneich:/etc/telegraf&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;InfluxDB 와 Telegraf configuration 이 완료 됬다.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-5---grafana-설치&quot;&gt;Step 5 - Grafana 설치&lt;/h2&gt;
+
+&lt;p&gt;이번 스텝에서는, 데이터 시각화를 위해 Grafana 데쉬보드를 설치할 것이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;grafana 키와 레파지토리를 추가한다.
+sudo curl https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo echo ‘deb https://packages.grafana.com/oss/deb stable main’ &amp;gt; /etc/apt/sources.list.d/grafana.list&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;grafana 패키지 설치
+sudo apt update
+sudo apt install grafana -y&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;grafana 서비스를 시작하고 시스템 부팅 시 실행되도록 설정한다.
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-6---grafana-설치&quot;&gt;Step 6 - Grafana 설치&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;브라우저를 열고 IP:포트로 접속한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;http://192.168.1.99:3000
+Login : admin / admin&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click the ‘Add data source’ button to add the influxdb data source.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Type details about the influxdb server configurations.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Name: influxdb
+URL: http://localhost:8086/&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scroll to the bottom page and type details of influxdb database settings.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Database: telegraf
+User: telegraf
+Password: ‘Password’&lt;/p&gt;
+
+&lt;p&gt;Click the ‘Save and Test’ button and make sure you get the ‘Data source is working’ result.&lt;/p&gt;
+
+&lt;p&gt;The InfluxDB data source has been added to the Grafana server.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-7---grafana-데쉬보드-구성&quot;&gt;Step 7 - Grafana 데쉬보드 구성&lt;/h2&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/TIG-Stack-onUbuntu/&quot;&gt;TIG Stack을 설치&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 20, 2019.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
