@@ -4,13 +4,62 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-03-25T18:23:25+09:00</updated>
+<updated>2019-04-04T13:25:40+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>keneich</name>
   <uri>http://localhost:4000/</uri>
   <email>keneich2@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[수영일기-201904월]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/swimming/" />
+  <id>http://localhost:4000/blog/swimming</id>
+  <updated>2019-04-04 00:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-04-01T09:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;건강한-삶을-위해&quot;&gt;건강한 삶을 위해&lt;/h1&gt;
+
+&lt;h3 id=&quot;2019년-04월-1째주-수영-기록&quot;&gt;2019년 04월 1째주 수영 기록&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
+  &lt;li&gt;기간 : 4월01일 ~ 4월07일&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 5,225&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-04-01-swimming/swim01.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;!--
+### 2019년 03월 xx일 강습
+1. 장소 : 군포 근로자 복지관
+2. 시간 : 21:00~21:50
+3. 운동량(단위 m) : 1,200
+  - 평균 스트로크 : 9.5
+  - 평균 페이스 : 1분46초/100m
+  - 이동시간/총운동시간: 20:44 / 1:08:55
+  - 칼로리 : 247
+
+![gamin1](/images/2019-02-27-swimming0227/0227_1.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+![gamin2](/images/2019-02-27-swimming0227/0227_2.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+
+평균 스트로크 수치를 중점 적으로 보고있다.  
+현재 9.5~9.8 정도 나온다. 8점 대로 낮추는걸 목표로 열심히 물질 해보자.
+
+## Reference
+* [https://pivotal.io/cicd](https://pivotal.io/cicd)
+--&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/swimming/&quot;&gt;수영일기-201904월&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on April 01, 2019.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -365,6 +414,18 @@ Password: ‘Password’&lt;/p&gt;
   <content type="html">
     &lt;h1 id=&quot;건강한-삶을-위해&quot;&gt;건강한 삶을 위해&lt;/h1&gt;
 
+&lt;h3 id=&quot;2019년-03월-전체&quot;&gt;2019년 03월 전체&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim06.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2019년-03월-4째주-수영-기록&quot;&gt;2019년 03월 4째주 수영 기록&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
+  &lt;li&gt;기간 : 3월25일 ~ 3월31일&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 5,225&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim05.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;2019년-03월-3째주-수영-기록&quot;&gt;2019년 03월 3째주 수영 기록&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
@@ -563,7 +624,7 @@ Password: ‘Password’&lt;/p&gt;
   <title type="html"><![CDATA[독서일기-2번째 도전]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/blog/reading/" />
   <id>http://localhost:4000/blog/reading</id>
-  <updated>2019-03-08 00:05:27 +0000T00:00:00-00:00</updated>
+  <updated>2019-04-04 00:05:27 +0000T00:00:00-00:00</updated>
   <published>2019-03-01T09:05:27+09:00</published>
   
   <author>
@@ -573,6 +634,54 @@ Password: ‘Password’&lt;/p&gt;
   </author>
   <content type="html">
     &lt;h1 id=&quot;읽는-즐거움을-위해100일-33권-3월1일6월8일&quot;&gt;읽는 즐거움을 위해(100일 33권, 3월1일~6월8일)&lt;/h1&gt;
+
+&lt;h3 id=&quot;8-테라폼-설치에서-운영까지&quot;&gt;8. 테라폼 설치에서 운영까지&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : IT기술서적&lt;/li&gt;
+  &lt;li&gt;저자 : 예브게니 브릭만 저/장경철 역&lt;/li&gt;
+  &lt;li&gt;분량 : 224 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 04/04&lt;/li&gt;
+  &lt;li&gt;읽기 완료 :&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14644648&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;읽는 중~&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;7-나는-습관을-조금-바꾸기로-했다&quot;&gt;7. 나는 습관을 조금 바꾸기로 했다&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 자기개발&lt;/li&gt;
+  &lt;li&gt;저자 : 이상우&lt;/li&gt;
+  &lt;li&gt;분량 : 332 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 04/03&lt;/li&gt;
+  &lt;li&gt;읽기 완료 :&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14468519&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;읽는 중~&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;325일--331일-자격증-준비로-독서를-못했다-남은-기간-분발하자&quot;&gt;3/25일 ~ 3/31일 자격증 준비로 독서를 못했다. 남은 기간 분발하자.&lt;/h3&gt;
+
+&lt;h3 id=&quot;6-이상하게-쉬운-주식&quot;&gt;6. 이상하게 쉬운 주식&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
+  &lt;li&gt;저자 : 이상우&lt;/li&gt;
+  &lt;li&gt;분량 : 332 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03/13&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 03/25&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14532128&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;주식에 입문하기 전에 보면 좋은 책이다.&lt;/li&gt;
+      &lt;li&gt;책에 소개된 방법 대로만 하면 누군나 돈 벌수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;5-주식투자자의-시선&quot;&gt;5. 주식투자자의 시선&lt;/h3&gt;
 &lt;ul&gt;
@@ -686,7 +795,7 @@ Password: ‘Password’&lt;/p&gt;
   <title type="html"><![CDATA[나의 100일 계획-2st]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/blog/100-day-planning2/" />
   <id>http://localhost:4000/blog/100-day-planning2</id>
-  <updated>2019-02-27 01:05:27 +0000T00:00:00-00:00</updated>
+  <updated>2019-04-04 01:05:27 +0000T00:00:00-00:00</updated>
   <published>2019-02-27T10:05:27+09:00</published>
   
   <author>
@@ -706,6 +815,8 @@ Password: ‘Password’&lt;/p&gt;
   &lt;li&gt;&lt;strong&gt;가족여행 2회이상 가자.&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;경매 1건 이상 낙찰한다.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;자격증-취득--완료-2019년-41일-aws-certified-solutions-architect---professional&quot;&gt;자격증 취득 : 완료 (2019년 4/1일, AWS Certified Solutions Architect - Professional)&lt;/h3&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;*&lt;/p&gt;
