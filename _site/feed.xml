@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-04-04T13:25:40+09:00</updated>
+<updated>2019-04-09T11:15:02+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>keneich</name>
@@ -15,8 +15,8 @@
 
 <entry>
   <title type="html"><![CDATA[수영일기-201904월]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/swimming/" />
-  <id>http://localhost:4000/blog/swimming</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/04swimming/" />
+  <id>http://localhost:4000/blog/04swimming</id>
   <updated>2019-04-04 00:05:27 +0000T00:00:00-00:00</updated>
   <published>2019-04-01T09:05:27+09:00</published>
   
@@ -32,10 +32,10 @@
 &lt;ol&gt;
   &lt;li&gt;장소 : 군포 근로자 복지관&lt;/li&gt;
   &lt;li&gt;기간 : 4월01일 ~ 4월07일&lt;/li&gt;
-  &lt;li&gt;운동량(단위 m) : 5,225&lt;/li&gt;
+  &lt;li&gt;운동량(단위 m) : 6,700&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-04-01-swimming/swim01.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-04-01-04swimming/swim01.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;!--
 ### 2019년 03월 xx일 강습
@@ -57,7 +57,7 @@
 * [https://pivotal.io/cicd](https://pivotal.io/cicd)
 --&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/swimming/&quot;&gt;수영일기-201904월&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on April 01, 2019.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/04swimming/&quot;&gt;수영일기-201904월&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on April 01, 2019.&lt;/p&gt;
   </content>
 </entry>
 
@@ -400,9 +400,197 @@ Password: ‘Password’&lt;/p&gt;
 
 
 <entry>
+  <title type="html"><![CDATA[독서일기-2번째 도전]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/reading/" />
+  <id>http://localhost:4000/blog/reading</id>
+  <updated>2019-04-04 00:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-03-01T09:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;읽는-즐거움을-위해100일-33권-3월1일6월8일&quot;&gt;읽는 즐거움을 위해(100일 33권, 3월1일~6월8일)&lt;/h1&gt;
+
+&lt;h3 id=&quot;9-테라폼-설치에서-운영까지&quot;&gt;9. 테라폼 설치에서 운영까지&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : IT기술서적&lt;/li&gt;
+  &lt;li&gt;저자 : 예브게니 브릭만 저/장경철 역&lt;/li&gt;
+  &lt;li&gt;분량 : 224 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 04/04&lt;/li&gt;
+  &lt;li&gt;읽기 완료 :&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14644648&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;읽는 중~&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;8-나는-습관을-조금-바꾸기로-했다&quot;&gt;8. 나는 습관을 조금 바꾸기로 했다&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 자기개발&lt;/li&gt;
+  &lt;li&gt;저자 : 이상우&lt;/li&gt;
+  &lt;li&gt;분량 : 332 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 04/03&lt;/li&gt;
+  &lt;li&gt;읽기 완료 :&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14468519&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;읽는 중~&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;7-이제껏-너를-친구라고-생각했는데&quot;&gt;7. 이제껏 너를 친구라고 생각했는데&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 자기개발&lt;/li&gt;
+  &lt;li&gt;저자 : 성유미&lt;/li&gt;
+  &lt;li&gt;분량 : 220 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 04/05&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 04/08&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14619708&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;교보문구에서 뚝딱 읽어버린 책으로 잘 읽어진다.&lt;/li&gt;
+      &lt;li&gt;인간관계에서 어쩔수 없는 관계에 대해서 이야기를 하고있다.&lt;/li&gt;
+      &lt;li&gt;불편해 지기 전에 표현하자. 표현했는데로 그대로면 인간관계를 유지하려 하지 말자&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;325일--331일-자격증-준비로-독서를-못했다-남은-기간-분발하자&quot;&gt;3/25일 ~ 3/31일 자격증 준비로 독서를 못했다. 남은 기간 분발하자.&lt;/h3&gt;
+
+&lt;h3 id=&quot;6-이상하게-쉬운-주식&quot;&gt;6. 이상하게 쉬운 주식&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
+  &lt;li&gt;저자 : 이상우&lt;/li&gt;
+  &lt;li&gt;분량 : 332 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03/13&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 03/25&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14532128&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;주식에 입문하기 전에 보면 좋은 책이다.&lt;/li&gt;
+      &lt;li&gt;책에 소개된 방법 대로만 하면 누군나 돈 벌수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-주식투자자의-시선&quot;&gt;5. 주식투자자의 시선&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
+  &lt;li&gt;저자 : 김범준&lt;/li&gt;
+  &lt;li&gt;분량 : 276 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03/11&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 03/13&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=10346855&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;주식 투자시 소액 투자자(개미)가 가져야할 마음 가짐에 대해서 많은 이야기를 해주고 있다.&lt;/li&gt;
+      &lt;li&gt;다년간 투자 경험을 바탕으로 독자에게 많은 것을 전달해 주려는 느낌을 받았다.&lt;/li&gt;
+      &lt;li&gt;기업과 동업한다는 생각으로 주식을 사라.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;4-나는-집-대신-상가에-투자한다&quot;&gt;4. 나는 집 대신 상가에 투자한다.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
+  &lt;li&gt;저자 : 김범준&lt;/li&gt;
+  &lt;li&gt;분량 : 270 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 3/08&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 3/10&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=10933014&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;상가 관련 책을 정독 한건 처음인거 같다.&lt;/li&gt;
+      &lt;li&gt;장사가 되는 자리를 볼줄 아는 안목을 기를 수 있다면, 대단히 매력적인 투자가 상가이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;3앞으로-10년-대한민국-부동산&quot;&gt;3.앞으로 10년, 대한민국 부동산&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
+  &lt;li&gt;저자 : 김장섭&lt;/li&gt;
+  &lt;li&gt;분량 : 270 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 3/4&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 3/12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14439900&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;결국은 서울이다!&lt;/li&gt;
+      &lt;li&gt;좋은 집을 사려거든 고민하지 말고 비싼 집을 사라. 가격이 높다는건 대중에 의해서 좋은 집이라고 인정 받은 것이다.&lt;/li&gt;
+      &lt;li&gt;지방도 호재가 있으니 경제 기사를 눈여겨 보자&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;2똑똑한-부동산-투자&quot;&gt;2.똑똑한 부동산 투자&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
+  &lt;li&gt;저자 : 정지영(아임해피)&lt;/li&gt;
+  &lt;li&gt;분량 : 245 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03월02일&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 03월05일&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=13008323&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;성공담 이야기와 투자시 주의할 사항들을 정리해 준 책이다.&lt;/li&gt;
+      &lt;li&gt;동영상강의와 카페등을 통해서 저자의 경험담을 더 들어봐야겠다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;1하는-일마다-인정받는-사람들의-비밀&quot;&gt;1.하는 일마다 인정받는 사람들의 비밀&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;분류 : 자기개발&lt;/li&gt;
+  &lt;li&gt;저자 : 이은재 &amp;lt;- my회사의 부사장이다.&lt;/li&gt;
+  &lt;li&gt;분량 : 279 페이지&lt;/li&gt;
+  &lt;li&gt;읽기 시작 : 03월01일&lt;/li&gt;
+  &lt;li&gt;읽기 완료 : 03월02일&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14524720&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;평!
+    &lt;ul&gt;
+      &lt;li&gt;대기업에서 근무했던 경험을 바탕으로 직장인들에게 많은 조언을 해주고 싶은 저자의 생각이 담겨있다.&lt;/li&gt;
+      &lt;li&gt;나 자신에 집중하라. 규칙을 지켜라. 공감능력을 가져라. 실행이 답이다.(마지막 정리 부분)&lt;/li&gt;
+      &lt;li&gt;93페이지 “아랫것” : 독자에게 반감을 줄 수 있는 문구를 사용한 부분이 아쉽다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;!--
+![gamin2](/images/2019-02-27-swimming0227/0227_2.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+
+평균 스트로크 수치를 중점 적으로 보고있다.  
+현재 9.5~9.8 정도 나온다. 8점 대로 낮추는걸 목표로 열심히 물질 해보자.
+
+## Reference
+* [https://pivotal.io/cicd](https://pivotal.io/cicd)
+--&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/reading/&quot;&gt;독서일기-2번째 도전&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 01, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[수영일기-201903월]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/swimming/" />
-  <id>http://localhost:4000/blog/swimming</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/03swimming/" />
+  <id>http://localhost:4000/blog/03swimming</id>
   <updated>2019-03-08 00:05:27 +0000T00:00:00-00:00</updated>
   <published>2019-03-01T09:05:27+09:00</published>
   
@@ -415,7 +603,7 @@ Password: ‘Password’&lt;/p&gt;
     &lt;h1 id=&quot;건강한-삶을-위해&quot;&gt;건강한 삶을 위해&lt;/h1&gt;
 
 &lt;h3 id=&quot;2019년-03월-전체&quot;&gt;2019년 03월 전체&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim06.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-03swimming/swim06.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2019년-03월-4째주-수영-기록&quot;&gt;2019년 03월 4째주 수영 기록&lt;/h3&gt;
 &lt;ol&gt;
@@ -424,7 +612,7 @@ Password: ‘Password’&lt;/p&gt;
   &lt;li&gt;운동량(단위 m) : 5,225&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim05.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-03swimming/swim05.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2019년-03월-3째주-수영-기록&quot;&gt;2019년 03월 3째주 수영 기록&lt;/h3&gt;
 &lt;ol&gt;
@@ -433,7 +621,7 @@ Password: ‘Password’&lt;/p&gt;
   &lt;li&gt;운동량(단위 m) : 6,625&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim04.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-03swimming/swim04.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;7일 중 5일 열심히 물질했다.&lt;br /&gt;
 지난 주 보다 2km 가까이 거리가 줄었다. ㅎㅎ&lt;br /&gt;
@@ -446,7 +634,7 @@ Password: ‘Password’&lt;/p&gt;
   &lt;li&gt;운동량(단위 m) : 8,125&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim03.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-03swimming/swim03.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;7일 중 5일 열심히 물질했다.&lt;br /&gt;
 물을 밀고 나가는 느낌 잘 기억하자!!&lt;/p&gt;
@@ -589,8 +777,8 @@ Password: ‘Password’&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-swimming/swim01.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;
-&lt;img src=&quot;/images/2019-03-01-swimming/swim02.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-01-03swimming/swim01.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;
+&lt;img src=&quot;/images/2019-03-01-03swimming/swim02.jpg&quot; alt=&quot;3swim&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3월 첫 수영이다. 3km를 달렸다. 무리를 해서 그런지 왼쪽 어깨에 통증이 살짝 있다.&lt;br /&gt;
 스트로크 수가 아직도 많다. 발차기 열심히 해주고 자세에 신경쓰자.&lt;/p&gt;
@@ -615,178 +803,7 @@ Password: ‘Password’&lt;/p&gt;
 * [https://pivotal.io/cicd](https://pivotal.io/cicd)
 --&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/swimming/&quot;&gt;수영일기-201903월&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 01, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[독서일기-2번째 도전]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/reading/" />
-  <id>http://localhost:4000/blog/reading</id>
-  <updated>2019-04-04 00:05:27 +0000T00:00:00-00:00</updated>
-  <published>2019-03-01T09:05:27+09:00</published>
-  
-  <author>
-    <name>keneich</name>
-    <uri>http://localhost:4000</uri>
-    <email>keneich2@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h1 id=&quot;읽는-즐거움을-위해100일-33권-3월1일6월8일&quot;&gt;읽는 즐거움을 위해(100일 33권, 3월1일~6월8일)&lt;/h1&gt;
-
-&lt;h3 id=&quot;8-테라폼-설치에서-운영까지&quot;&gt;8. 테라폼 설치에서 운영까지&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : IT기술서적&lt;/li&gt;
-  &lt;li&gt;저자 : 예브게니 브릭만 저/장경철 역&lt;/li&gt;
-  &lt;li&gt;분량 : 224 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 04/04&lt;/li&gt;
-  &lt;li&gt;읽기 완료 :&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14644648&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;읽는 중~&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;7-나는-습관을-조금-바꾸기로-했다&quot;&gt;7. 나는 습관을 조금 바꾸기로 했다&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : 자기개발&lt;/li&gt;
-  &lt;li&gt;저자 : 이상우&lt;/li&gt;
-  &lt;li&gt;분량 : 332 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 04/03&lt;/li&gt;
-  &lt;li&gt;읽기 완료 :&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14468519&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;읽는 중~&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;325일--331일-자격증-준비로-독서를-못했다-남은-기간-분발하자&quot;&gt;3/25일 ~ 3/31일 자격증 준비로 독서를 못했다. 남은 기간 분발하자.&lt;/h3&gt;
-
-&lt;h3 id=&quot;6-이상하게-쉬운-주식&quot;&gt;6. 이상하게 쉬운 주식&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
-  &lt;li&gt;저자 : 이상우&lt;/li&gt;
-  &lt;li&gt;분량 : 332 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 03/13&lt;/li&gt;
-  &lt;li&gt;읽기 완료 : 03/25&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14532128&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;주식에 입문하기 전에 보면 좋은 책이다.&lt;/li&gt;
-      &lt;li&gt;책에 소개된 방법 대로만 하면 누군나 돈 벌수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;5-주식투자자의-시선&quot;&gt;5. 주식투자자의 시선&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
-  &lt;li&gt;저자 : 김범준&lt;/li&gt;
-  &lt;li&gt;분량 : 276 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 03/11&lt;/li&gt;
-  &lt;li&gt;읽기 완료 : 03/13&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=10346855&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;주식 투자시 소액 투자자(개미)가 가져야할 마음 가짐에 대해서 많은 이야기를 해주고 있다.&lt;/li&gt;
-      &lt;li&gt;다년간 투자 경험을 바탕으로 독자에게 많은 것을 전달해 주려는 느낌을 받았다.&lt;/li&gt;
-      &lt;li&gt;기업과 동업한다는 생각으로 주식을 사라.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;4-나는-집-대신-상가에-투자한다&quot;&gt;4. 나는 집 대신 상가에 투자한다.&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
-  &lt;li&gt;저자 : 김범준&lt;/li&gt;
-  &lt;li&gt;분량 : 270 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 3/08&lt;/li&gt;
-  &lt;li&gt;읽기 완료 : 3/10&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=10933014&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;상가 관련 책을 정독 한건 처음인거 같다.&lt;/li&gt;
-      &lt;li&gt;장사가 되는 자리를 볼줄 아는 안목을 기를 수 있다면, 대단히 매력적인 투자가 상가이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;3앞으로-10년-대한민국-부동산&quot;&gt;3.앞으로 10년, 대한민국 부동산&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
-  &lt;li&gt;저자 : 김장섭&lt;/li&gt;
-  &lt;li&gt;분량 : 270 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 3/4&lt;/li&gt;
-  &lt;li&gt;읽기 완료 : 3/12&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14439900&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;결국은 서울이다!&lt;/li&gt;
-      &lt;li&gt;좋은 집을 사려거든 고민하지 말고 비싼 집을 사라. 가격이 높다는건 대중에 의해서 좋은 집이라고 인정 받은 것이다.&lt;/li&gt;
-      &lt;li&gt;지방도 호재가 있으니 경제 기사를 눈여겨 보자&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;2똑똑한-부동산-투자&quot;&gt;2.똑똑한 부동산 투자&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : 투자/재테크&lt;/li&gt;
-  &lt;li&gt;저자 : 정지영(아임해피)&lt;/li&gt;
-  &lt;li&gt;분량 : 245 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 03월02일&lt;/li&gt;
-  &lt;li&gt;읽기 완료 : 03월05일&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=13008323&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;성공담 이야기와 투자시 주의할 사항들을 정리해 준 책이다.&lt;/li&gt;
-      &lt;li&gt;동영상강의와 카페등을 통해서 저자의 경험담을 더 들어봐야겠다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;1하는-일마다-인정받는-사람들의-비밀&quot;&gt;1.하는 일마다 인정받는 사람들의 비밀&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;분류 : 자기개발&lt;/li&gt;
-  &lt;li&gt;저자 : 이은재 &amp;lt;- my회사의 부사장이다.&lt;/li&gt;
-  &lt;li&gt;분량 : 279 페이지&lt;/li&gt;
-  &lt;li&gt;읽기 시작 : 03월01일&lt;/li&gt;
-  &lt;li&gt;읽기 완료 : 03월02일&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=14524720&quot;&gt;책 정보&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;평!
-    &lt;ul&gt;
-      &lt;li&gt;대기업에서 근무했던 경험을 바탕으로 직장인들에게 많은 조언을 해주고 싶은 저자의 생각이 담겨있다.&lt;/li&gt;
-      &lt;li&gt;나 자신에 집중하라. 규칙을 지켜라. 공감능력을 가져라. 실행이 답이다.(마지막 정리 부분)&lt;/li&gt;
-      &lt;li&gt;93페이지 “아랫것” : 독자에게 반감을 줄 수 있는 문구를 사용한 부분이 아쉽다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;!--
-![gamin2](/images/2019-02-27-swimming0227/0227_2.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
-
-평균 스트로크 수치를 중점 적으로 보고있다.  
-현재 9.5~9.8 정도 나온다. 8점 대로 낮추는걸 목표로 열심히 물질 해보자.
-
-## Reference
-* [https://pivotal.io/cicd](https://pivotal.io/cicd)
---&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/reading/&quot;&gt;독서일기-2번째 도전&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 01, 2019.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/03swimming/&quot;&gt;수영일기-201903월&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on March 01, 2019.&lt;/p&gt;
   </content>
 </entry>
 
