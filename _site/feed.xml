@@ -4,13 +4,87 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-04-22T16:47:09+09:00</updated>
+<updated>2019-04-26T16:55:37+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>keneich</name>
   <uri>http://localhost:4000/</uri>
   <email>keneich2@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[요리-소떡소떡]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/cook0426/" />
+  <id>http://localhost:4000/blog/cook0426</id>
+  <updated>2019-04-26 00:05:27 +0000T00:00:00-00:00</updated>
+  <published>2019-04-26T09:05:27+09:00</published>
+  
+  <author>
+    <name>keneich</name>
+    <uri>http://localhost:4000</uri>
+    <email>keneich2@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;맛있는-삶을-위해&quot;&gt;맛있는 삶을 위해&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;아들이 소떡소떡이 먹고 싶다고 보챈다. 만들어보자&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;준비물
+    &lt;ul&gt;
+      &lt;li&gt;가래떡, 소시지&lt;/li&gt;
+      &lt;li&gt;토마토 캐첩, 올리고당, 간장, 고추장&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;요리 순서
+    &lt;ul&gt;
+      &lt;li&gt;떡을 말랑말랑하게 따뜻한 물에 끓여준다.&lt;br /&gt;
+ &lt;img src=&quot;/images/2019-04-26-cook0426/cook01.jpg&quot; alt=&quot;4cook&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;떡과 칼집을 내준 소시지를 꼬치에 예쁘게 꽂아 준다.&lt;/li&gt;
+  &lt;li&gt;에이프라이어기 180도 에서 5분 -&amp;gt; 뒤집어서 5분 돌려준다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;소스를 준비한다. (간장 1큰술 + 고추장 1큰술 + 토마토캐첩 1큰술 + 올리고당 1큰술)&lt;br /&gt;
+ &lt;img src=&quot;/images/2019-04-26-cook0426/cook02.jpg&quot; alt=&quot;4cook&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;소스를 골골루 바른 후 맛있게 먹는다.&lt;br /&gt;
+ &lt;img src=&quot;/images/2019-04-26-cook0426/cook03.jpg&quot; alt=&quot;4cook&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;br /&gt;
+ &lt;img src=&quot;/images/2019-04-26-cook0426/cook04.jpg&quot; alt=&quot;4cook&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+
+&lt;!--
+### 2019년 03월 xx일 강습
+1. 장소 : 군포 근로자 복지관
+2. 시간 : 21:00~21:50
+3. 운동량(단위 m) : 1,200
+  - 평균 스트로크 : 9.5
+  - 평균 페이스 : 1분46초/100m
+  - 이동시간/총운동시간: 20:44 / 1:08:55
+  - 칼로리 : 247
+
+![gamin1](/images/2019-02-27-swimming0227/0227_1.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+![gamin2](/images/2019-02-27-swimming0227/0227_2.jpg){: width=&quot;300&quot; height=&quot;400&quot;}{: .center}
+
+평균 스트로크 수치를 중점 적으로 보고있다.  
+현재 9.5~9.8 정도 나온다. 8점 대로 낮추는걸 목표로 열심히 물질 해보자.
+
+## Reference
+
+* [https://pivotal.io/cicd](https://pivotal.io/cicd)
+--&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/cook0426/&quot;&gt;요리-소떡소떡&lt;/a&gt; was originally published by keneich at &lt;a href=&quot;http://localhost:4000&quot;&gt;Keneich's Blog&lt;/a&gt; on April 26, 2019.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -51,14 +125,14 @@
       &lt;li&gt;에어프라이어를 180도에서 10분간 -&amp;gt; 전복을 뒤집고 5분 가량 돌려준다.&lt;/li&gt;
       &lt;li&gt;전복이 적당하게 구어졌는지 확인 한다.&lt;br /&gt;
  &lt;img src=&quot;/images/2019-04-21-cook0421/cook02.jpg&quot; alt=&quot;4cook&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;먹기 좋게 잘라준다.
+      &lt;li&gt;먹기 좋게 잘라준다.&lt;br /&gt;
  &lt;img src=&quot;/images/2019-04-21-cook0421/cook03.jpg&quot; alt=&quot;4cook&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;맛있게 먹는 방법
     &lt;ul&gt;
       &lt;li&gt;초고추장에 찍어 먹고, 상추에 쌈싸먹었다.&lt;/li&gt;
-      &lt;li&gt;복분자 술과 같이 하면 금상첨화 입니다.
+      &lt;li&gt;복분자 술과 같이 하면 금상첨화 입니다.&lt;br /&gt;
  &lt;img src=&quot;/images/2019-04-21-cook0421/cook04.jpg&quot; alt=&quot;4cook&quot; width=&quot;300&quot; height=&quot;400&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
